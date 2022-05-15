@@ -41,5 +41,7 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('tw-elements/dist/plugin')
+  ],
 };
