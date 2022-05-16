@@ -13,12 +13,28 @@ title: Resume
 <!--    </li>-->
 <!--    <% } %>-->
 <!--</div>-->
+
+<script>
+  $(function (){
+    $('.skillCheck').on('click', function() {
+      console.log('here')
+      var skill = $(this).attr('id');
+      var checked = $(this).is(':checked');
+      if (checked) {
+        $('.' + skill).show();
+      } else {
+        $('.' + skill).hide();
+      }
+    });
+  })
+</script>
+
 <div class="flex flex-col col-span-1 place-content-center cv-scrollspy"
      data-bs-spy="scroll"
      data-bs-offset="200">
     <div class="flex self-center">
         <div class="md:space-x-1 space-y-1 md:space-y-0 mb-4">
-            <a class="inline-block px-6 py-2.5 bg-yellow-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+            <a class="inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                data-bs-toggle="collapse"
                href="#selectSkills"
                role="button"
@@ -74,59 +90,129 @@ title: Resume
         </div>
     </div>
 </div>
-<ol class="border-l border-gray-300">
+<div class="flex flex-col">
     <%for (item of cv.items.slice().reverse()) { %>
-    <li id="<%=item.id%>" >
-        <div class="flex flex-start items-center pt-3">
-            <div class="bg-gray-300 w-5 h-5 rounded-full -ml-2.5 mr-3"></div>
-            <p class="text-gray-500 text-sm"><%= item.startDate %><%if(item.endDate) { %> - <%= item.endDate %><% } %></p>
+    <div class="flex flex-row">
+        <div class="w-1/3">
+            <div class="mt-3">
+                <small class="companyAbout">
+                    <%= item.companyDescription %>
+                </small>
+            </div>
         </div>
-        <div class="mt-0.5 ml-4 mb-6">
-            <h3 class="text-gray-900 font-semibold text-xl mb-1.5">
-                <%= item.positionName %>
-            </h3>
-            <h4 class="text-gray-800 font-semibold text-l mb-1.5">
-                <%= item.companyName %>
-            </h4>
-            <small class="companyAbout">
-                <%= item.companyDescription %>
-            </small>
-            <%if (item.positionDescription) { %>
-            <p class="text-gray-500 mb-3">
-                <%= item.positionDescription %>
-            </p>
-            <% } %>
-            <%if(item.positionResponsibilities) { %>
-            <p class="text-gray-500 mb-3">
-            My responsibilities:
-            <ul>
-                <%for (skill of item.positionResponsibilities.split('\n')) { %>
-                    <li>
-                        <%= skill %>
-                    </li>
+        <div class="w-2/3 border-l border-yellow-500">
+            <div class="flex flex-start items-center pt-3">
+                <div class="bg-yellow-500 w-5 h-5 rounded-full -ml-2.5 mr-3"></div>
+                <p class="text-yellow-500 font-bold text-sm"><%= item.startDate %><%if(item.endDate) { %> - <%= item.endDate %><% } %></p>
+            </div>
+            <div class="mt-3 ml-3 text-sm">
+                <h3 class="text-gray-900 font-bold text-xl mb-0.5">
+                    <%= item.positionName %>
+                </h3>
+                <h4 class="text-gray-700 font-semibold text-lg mb-1.5">
+                    <%= item.companyName %>
+                </h4>
+                <%if (item.positionDescription) { %>
+                    <p class="text-gray-700 mb-3">
+                        <%= item.positionDescription %>
+                    </p>
                 <% } %>
-            </ul>
-            </p>
-            <% } %>
-            <%if(item.positionAchievements) { %>
-            <p class="text-gray-500 mb-3">
-            Interesting tasks I faced:
-            <ul>
-                <%for (skill of item.positionAchievements.split('\n')) { %>
-                    <li>
-                        <%= skill %>
-                    </li>
-                <% } %>
-            </ul>
-            </p>
-            <% } %>
-            <%if (item.positionEducation) { %>
-                <p class="text-gray-500 mb-3">
-                    <%= item.positionEducation %>
+                <%if(item.positionResponsibilities) { %>
+                <p class="text-gray-700 mb-3">
+                    My responsibilities:
+                <ul>
+                    <%for (skill of item.positionResponsibilities.split('\n')) { %>
+                        <li>
+                            <%= skill %>
+                        </li>
+                    <% } %>
+                </ul>
                 </p>
-            <% } %>
+                <% } %>
+                <%if(item.positionAchievements) { %>
+                <p class="text-gray-500 mb-3">
+                    Interesting tasks I faced:
+                <ul>
+                    <%for (skill of item.positionAchievements.split('\n')) { %>
+                        <li>
+                            <%= skill %>
+                        </li>
+                    <% } %>
+                </ul>
+                </p>
+                <% } %>
+                <%if (item.positionEducation) { %>
+                    <p class="text-gray-500 mb-3">
+                        <%= item.positionEducation %>
+                    </p>
+                <% } %>
+            </div>
         </div>
-    </li>
-    <% } %>
-</ol>
+    </div>
+    <%}%>
+</div>
+
+
+<!--<ol class="border-l border-gray-300 ml-40">-->
+<!--    <%for (item of cv.items.slice().reverse()) { %>-->
+<!--    <li id="<%=item.id%>" >-->
+<!--        <div class="flex flex-row">-->
+<!--            <div class="-ml-40 mt-0.5 flex w-40">-->
+<!--                <small class="companyAbout">-->
+<!--                    <%= item.companyDescription %>-->
+<!--                </small>-->
+<!--            </div>-->
+<!--            <div class="flex flex-col">-->
+<!--                <div class="flex flex-start items-center pt-3">-->
+<!--                    <div class="bg-gray-300 w-5 h-5 rounded-full -ml-2.5 mr-3"></div>-->
+<!--                    <p class="text-gray-500 text-sm"><%= item.startDate %><%if(item.endDate) { %> - <%= item.endDate %><% } %></p>-->
+<!--                </div>-->
+<!--                <div class="mt-0.5 ml-4 mb-6">-->
+<!--                    <h3 class="text-gray-900 font-semibold text-xl mb-1.5">-->
+<!--                        <%= item.positionName %>-->
+<!--                    </h3>-->
+<!--                    <h4 class="text-gray-800 font-semibold text-l mb-1.5">-->
+<!--                        <%= item.companyName %>-->
+<!--                    </h4>-->
+<!--                    <%if (item.positionDescription) { %>-->
+<!--                        <p class="text-gray-500 mb-3">-->
+<!--                            <%= item.positionDescription %>-->
+<!--                        </p>-->
+<!--                    <% } %>-->
+<!--                    <%if(item.positionResponsibilities) { %>-->
+<!--                    <p class="text-gray-500 mb-3">-->
+<!--                        My responsibilities:-->
+<!--                    <ul>-->
+<!--                        <%for (skill of item.positionResponsibilities.split('\n')) { %>-->
+<!--                            <li>-->
+<!--                                <%= skill %>-->
+<!--                            </li>-->
+<!--                        <% } %>-->
+<!--                    </ul>-->
+<!--                    </p>-->
+<!--                    <% } %>-->
+<!--                    <%if(item.positionAchievements) { %>-->
+<!--                    <p class="text-gray-500 mb-3">-->
+<!--                        Interesting tasks I faced:-->
+<!--                    <ul>-->
+<!--                        <%for (skill of item.positionAchievements.split('\n')) { %>-->
+<!--                            <li>-->
+<!--                                <%= skill %>-->
+<!--                            </li>-->
+<!--                        <% } %>-->
+<!--                    </ul>-->
+<!--                    </p>-->
+<!--                    <% } %>-->
+<!--                    <%if (item.positionEducation) { %>-->
+<!--                        <p class="text-gray-500 mb-3">-->
+<!--                            <%= item.positionEducation %>-->
+<!--                        </p>-->
+<!--                    <% } %>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </li>-->
+<!--    <% } %>-->
+<!--</ol>-->
 
