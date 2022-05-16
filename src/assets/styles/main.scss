@@ -111,3 +111,13 @@ body {
   }
   padding: 2rem;
 }
+
+.cv-spy {
+  li {
+    a {
+      &:not(.active) {
+        display: none;
+      }
+    }
+  }
+}

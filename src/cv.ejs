@@ -8,10 +8,25 @@ title: Resume
     data-bs-target="#cv-scrollspy"
     data-bs-offset="200"
     class="scrollspy-example">
-    <%for (item of cv.items.slice().reverse()) { %>
-    <li id="<%=item.id%>">
+    <li id="about-me">
         <div class="flex flex-start items-center pt-3">
-            <div class="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
+            <div class="bg-gray-300 w-5 h-5 rounded-full -ml-2.5 mr-3"></div>
+            <p class="text-gray-500 text-sm">Currently</p>
+        </div>
+        <div class="mt-0.5 ml-4 mb-6">
+            <h3 class="text-gray-900 font-semibold text-xl mb-1.5">
+                About me
+            </h3>
+            <h4>Software architect, with a strong entrepreneur mindset</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </li>
+    <%for (item of cv.items.slice().reverse()) { %>
+    <li id="<%=item.id%>" >
+        <div class="flex flex-start items-center pt-3">
+            <div class="bg-gray-300 w-5 h-5 rounded-full -ml-2.5 mr-3"></div>
             <p class="text-gray-500 text-sm"><%= item.startDate %><%if(item.endDate) { %> - <%= item.endDate %><% } %></p>
         </div>
         <div class="mt-0.5 ml-4 mb-6">
@@ -28,6 +43,7 @@ title: Resume
             <% } %>
             <%if(item.positionResponsibilities) { %>
             <p class="text-gray-500 mb-3">
+            My responsibilities:
             <ul>
                 <%for (skill of item.positionResponsibilities.split('\n')) { %>
                     <li>
@@ -37,6 +53,24 @@ title: Resume
                 <% } %>
             </ul>
             </p>
+            <% } %>
+            <%if(item.positionAchievements) { %>
+            <p class="text-gray-500 mb-3">
+            Interesting tasks I faced:
+            <ul>
+                <%for (skill of item.positionAchievements.split('\n')) { %>
+                    <li>
+
+                        <%= skill %>
+                    </li>
+                <% } %>
+            </ul>
+            </p>
+            <% } %>
+            <%if (item.positionEducation) { %>
+                <p class="text-gray-500 mb-3">
+                    <%= item.positionEducation %>
+                </p>
             <% } %>
         </div>
     </li>

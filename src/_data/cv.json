@@ -105,5 +105,27 @@
       "positionEducation": null,
       "id": "livlia-kft"
     }
+  ],
+  "languages": [
+    {
+      "name": "Hungarian",
+      "level": "Native",
+      "percentage": "100"
+    },
+    {
+      "name": "English",
+      "level": "C1",
+      "percentage": "90"
+    },
+    {
+      "name": "German",
+      "level": "B2",
+      "percentage": "75"
+    },
+    {
+      "name": "Russian",
+      "level": "In progress",
+      "percentage": "25"
+    }
   ]
 }
