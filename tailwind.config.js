@@ -40,8 +40,14 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      opacity: ['disabled'],
+      cursor: ['disabled'],
+    },
+  },
   plugins: [
-    require('tw-elements/dist/plugin')
+    // eslint-disable-next-line
+    require('tw-elements/dist/plugin'),
   ],
 };
