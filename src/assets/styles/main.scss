@@ -87,37 +87,40 @@ a:hover {
   @apply bg-gray-100;
 }
 
-body {
-  @include bp(medium) {
-    display: flex;
-    flex-direction: row;
-  }
-}
+//body {
+//  @include bp(medium) {
+//    display: flex;
+//    flex-direction: row;
+//  }
+//}
+//.sidebar {
+//  @include bp(medium) {
+//    @apply w-1/5;
+//    min-height: 100vh;
+//    height: 100vh;
+//  }
+//  background-color: #8c9cad;
+//  position: sticky;
+//  top: 0;
+//}
+//
+//.main {
+//  @include bp(md) {
+//    @apply w-4/5;
+//  }
+//  padding: 2rem;
+//}
+//
+//.cv-spy {
+//  li {
+//    a {
+//      &:not(.active) {
+//        display: none;
+//      }
+//    }
+//  }
+//}
 
-.sidebar {
-  @include bp(medium) {
-    @apply w-1/5;
-    min-height: 100vh;
-    height: 100vh;
-  }
-  background-color: #8c9cad;
-  position: sticky;
-  top: 0;
-}
-
-.main {
-  @include bp(md) {
-    @apply w-4/5;
-  }
-  padding: 2rem;
-}
-
-.cv-spy {
-  li {
-    a {
-      &:not(.active) {
-        display: none;
-      }
-    }
-  }
+.shape-circle {
+  shape-outside: circle();
 }

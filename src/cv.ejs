@@ -3,26 +3,81 @@ permalink: cv.html
 title: Resume
 ---
 
-<ol class="border-l border-gray-300 relative overflow-y-scroll" style="height:500px"
-    data-bs-spy="scroll"
-    data-bs-target="#cv-scrollspy"
-    data-bs-offset="200"
-    class="scrollspy-example">
-    <li id="about-me">
-        <div class="flex flex-start items-center pt-3">
-            <div class="bg-gray-300 w-5 h-5 rounded-full -ml-2.5 mr-3"></div>
-            <p class="text-gray-500 text-sm">Currently</p>
+<script>
+  $(function (){
+    $('.skillCheck').on('click', function() {
+      console.log('here')
+      var skill = $(this).attr('id');
+      var checked = $(this).is(':checked');
+      if (checked) {
+        $('.' + skill).show();
+      } else {
+        $('.' + skill).hide();
+      }
+    });
+  })
+</script>
+
+<div class="flex flex-col col-span-1 place-content-center">
+    <div class="flex self-center">
+        <div class="md:space-x-1 space-y-1 md:space-y-0 mb-4">
+            <a class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+               data-bs-toggle="collapse"
+               href="#selectSkills"
+               role="button"
+               aria-expanded="false"
+               aria-controls="selectSkills">
+                Select details to show
+            </a>
         </div>
-        <div class="mt-0.5 ml-4 mb-6">
-            <h3 class="text-gray-900 font-semibold text-xl mb-1.5">
-                About me
-            </h3>
-            <h4>Software architect, with a strong entrepreneur mindset</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+    </div>
+    <div class="collapse" id="selectSkills">
+        <div class="block p-6 rounded-lg shadow-lg bg-white">
+            <div class="flex justify-center">
+                <div>
+                    <div class="form-check">
+                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                               type="checkbox"
+                               value=""
+                               id="companyAbout"
+                                checked>
+                        <label class="form-check-label inline-block text-gray-800" for="companyAbout">
+                            Show company about
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                               type="checkbox"
+                               value=""
+                               id="managerial">
+                        <label class="form-check-label inline-block text-gray-800" for="managerial">
+                            Show managerial experience
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                               type="checkbox"
+                               value=""
+                               id="programming">
+                        <label class="form-check-label inline-block text-gray-800" for="programming">
+                            Show programming experience
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                               type="checkbox"
+                               value=""
+                               id="technologies">
+                        <label class="form-check-label inline-block text-gray-800" for="technologies">
+                            Show used technologies
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
-    </li>
+    </div>
+</div>
+<ol class="border-l border-gray-300">
     <%for (item of cv.items.slice().reverse()) { %>
     <li id="<%=item.id%>" >
         <div class="flex flex-start items-center pt-3">
@@ -36,6 +91,9 @@ title: Resume
             <h4 class="text-gray-800 font-semibold text-l mb-1.5">
                 <%= item.companyName %>
             </h4>
+            <small class="companyAbout">
+                <%= item.companyDescription %>
+            </small>
             <%if (item.positionDescription) { %>
             <p class="text-gray-500 mb-3">
                 <%= item.positionDescription %>
@@ -47,7 +105,6 @@ title: Resume
             <ul>
                 <%for (skill of item.positionResponsibilities.split('\n')) { %>
                     <li>
-
                         <%= skill %>
                     </li>
                 <% } %>
@@ -60,7 +117,6 @@ title: Resume
             <ul>
                 <%for (skill of item.positionAchievements.split('\n')) { %>
                     <li>
-
                         <%= skill %>
                     </li>
                 <% } %>
