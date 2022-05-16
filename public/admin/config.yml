@@ -34,3 +34,8 @@ collections:
           - { name: "url", label: "Site url" }
           - { name: "locale", label: "Language" }
           - { name: "author", label: "Author" }
+      - name: "cv"
+        label: 'CV'
+        file: "src/_data/cv.json"
+        fields:
+          - { name: "items", label: "Items" }

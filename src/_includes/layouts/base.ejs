@@ -33,7 +33,7 @@
           "@type": "Organization",
           "logo": {
             "@type": "ImageObject",
-            "url": "<%= `${site.url}/assets/images/logo.png` %>"
+            "url": "<%= `${site.url}/assets/images/portrait_small.jpg` %>"
           },
           "name": "<%= site.author %>"
         },
@@ -64,10 +64,15 @@
 
   <body class="antialiased w-full text-gray-700">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  {% include 'node_modules/tw-elements/dist/js/index.min.js' %}
-
+  <div class="sidebar">
+    <img src="<%= `assets/images/portrait_transparent.png` %>"
+         alt="Portrait"
+         class="rounded-md border-transparent grayscale border-8 h-1/3 mx-auto">
+  </div>
+  <div class="main">
     <div class="max-w-screen-lg mx-auto">
+
+
       <div class="border-b border-gray-300">
         <div class="pt-16 pb-8">
           <h1 class="font-semibold text-3xl text-gray-800"><%= site.title %></h1>
@@ -77,30 +82,29 @@
           <ul class="flex flex-wrap text-xl">
             <li class="mr-6">
               <a class="text-gray-700 border-none hover:no-underline hover:text-gray-800" href="/"
-                >Home</a
+              >Home</a
               >
             </li>
             <li class="mr-6">
               <a
-                class="text-gray-700 border-none hover:no-underline hover:text-gray-800"
-                href="https://github.com/zszilvai/"
+                      class="text-gray-700 border-none hover:no-underline hover:text-gray-800"
+                      href="https://github.com/zszilvai/"
               >
                 GitHub
               </a>
             </li>
             <li class="mr-6">
               <a
-                class="text-gray-700 border-none hover:no-underline hover:text-gray-800"
-                href="/cv.html"
+                      class="text-gray-700 border-none hover:no-underline hover:text-gray-800"
+                      href="/cv.html"
               >
                 Resume
               </a>
             </li>
             <li class="mr-6">
               <a
-                class="text-gray-700 border-none hover:no-underline hover:text-gray-800"
-                href="/blog.html"
-              >
+                      class="text-gray-700 border-none hover:no-underline hover:text-gray-800"
+                      href="/blog.html">
                 Blog
               </a>
             </li>
@@ -117,5 +121,6 @@
         <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>
       </div>
     </div>
+  </div>
   </body>
 </html>

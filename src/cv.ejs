@@ -3,4 +3,42 @@ permalink: cv.html
 title: Resume
 ---
 
-Ez a CV
+<ol class="border-l border-gray-300">
+    <%for (item of cv.items.reverse()) { %>
+    <li>
+        <div class="flex flex-start items-center pt-3">
+            <div class="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
+            <p class="text-gray-500 text-sm"><%= item.startDate %><%if(item.endDate) { %> - <%= item.endDate %><% } %></p>
+        </div>
+        <div class="mt-0.5 ml-4 mb-6">
+            <h3 class="text-gray-900 font-semibold text-xl mb-1.5">
+                <%= item.positionName %>
+            </h3>
+            <h4 class="text-gray-800 font-semibold text-l mb-1.5">
+                <%= item.companyName %>
+            </h4>
+            <%if (item.positionDescription) { %>
+            <p class="text-gray-500 mb-3">
+                <%= item.positionDescription %>
+            </p>
+            <% } %>
+            <%if(item.positionResponsibilities) { %>
+            <p class="text-gray-500 mb-3">
+            <ul>
+                <%for (skill of item.positionResponsibilities.split('\n')) { %>
+                    <li>
+
+                        <%= skill %>
+                    </li>
+                <% } %>
+            </ul>
+            </p>
+            <% } %>
+        </div>
+    </li>
+
+
+
+    <% } %>
+</ol>
+

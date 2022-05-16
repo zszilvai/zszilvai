@@ -1,73 +1,102 @@
 {
   "items": [
     {
-      "companyName": "",
-      "companyLogo": "",
-      "positionName": "",
-      "positionDescription": "",
-      "startDate": "",
-      "endDate": "",
-      "location": "",
-      "positionLink": "",
-      "positionType": "",
-      "positionLevel": "",
-      "positionResponsibilities": [
-        ""
-      ],
-      "positionDuties": [
-        ""
-      ],
-      "positionAchievements": [
-        ""
-      ],
-      "positionSkills": [
-        ""
-      ],
-      "positionTools": [
-        ""
-      ],
-      "positionLanguages": [
-        ""
-      ],
-      "positionCertifications": [
-        ""
-      ],
-      "positionReferences": [
-        ""
-      ],
-      "positionEducation": [
-        ""
-      ],
-      "positionExperience": [
-        ""
-      ],
-      "positionProjects": [
-        ""
-      ],
-      "positionPublications": [
-        ""
-      ],
-      "positionCourses": [
-        ""
-      ],
-      "positionAwards": [
-        ""
-      ],
-      "positionPatents": [
-        ""
-      ],
-      "positionHonors": [
-        ""
-      ],
-      "positionVolunteer": [
-        ""
-      ],
-      "positionActivities": [
-        ""
-      ],
-      "positionInterests": [
-        ""
-      ]
+      "companyName": "IRG Technologies",
+      "companyLogo": null,
+      "companyDescription": null,
+      "positionName": "Software developer",
+      "positionDescription": "As a contractor, I developed Xamarin Android modules to connect long-range RFID readers to smartphones via Bluetooth",
+      "startDate": 2012,
+      "endDate": null,
+      "positionResponsibilities": null,
+      "positionAchievements": null,
+      "positionSkills": ".NET Framework, Xamarin, C#",
+      "positionTools": null,
+      "positionEducation": null
+    },
+    {
+      "companyName": "IIM / Weyland Technologies Kft",
+      "companyLogo": null,
+      "companyDescription": "The first official, legally established team of mine. We started exploring the Hungarian startup ecosystem with our projects while serving a small but international client group with web and mobile applications in parallel. ",
+      "positionName": "Co-founder, software developer",
+      "positionDescription": null,
+      "startDate": 2012,
+      "endDate": 2014,
+      "positionResponsibilities": "•\tArchitecting our solutions, then implementing and operating the backend of the applications in the cloud.\n•\tAs a software engineer, I gained a comprehensive overview of different technologies and usages during the prototype development of ideas ranging from avalanche alarm systems to mobile applications for fast fashion stores. \n•\tBootstrapping these ideas and trying to turn them into real businesses shaped the entrepreneur inside me.",
+      "positionAchievements": null,
+      "positionSkills": "MS Azure, .NET Framework, Azure SQL, C#, Xamarin, JQuery, native Android, and a little bit of iOS in Objective C",
+      "positionTools": null,
+      "positionEducation": null
+    },
+    {
+      "companyName": "Kifly Connect",
+      "companyLogo": null,
+      "companyDescription": "In my first angel-funded company, we aimed to improve the service quality and passenger experience at airports - beneficial for the operators, the carriers, and the passengers. We designed a B2B2C solution where the end-users (the passengers) retrieved real-time flight information and indoor navigation via a mobile application. Using this app, airports and their services could offer users personalized benefits and loyalty programs.",
+      "positionName": "Co-Founder/CTO",
+      "positionDescription": null,
+      "startDate": "Sep 2014",
+      "endDate": "Dec-15",
+      "positionResponsibilities": "•\tCoordinating an Android, an iOS, and a web development team - 10 people - and designing the platform-independent, shared structure and logic of the applications. \n•\tI architected and implemented the databases and the backend services as well. \n•\tIt became my duty to introduce and manage agile practices in the development process.\n•\tAs a shareholder, I was part of the decision-making processes and on-site negotiations with potential clients, suppliers, and potential partners for the overseas expansion.",
+      "positionAchievements": "•\tThe development process involved designing the architecture in Visual Paradigm, a software modeling tool - then we transpiled the UML diagrams to Objective-C, Java, and .NET code for easy implementation of shared logic.\n•\tExperimenting with indoor positioning and navigation using various network devices, from Bluetooth beacons to Cisco routers, was fascinating.",
+      "positionSkills": ".NET Framework, ASP.NET Web Api, C#, Azure SQL, Redis, Visual Paradigm, a bit of Objective-C and Java for mobile development, Jira",
+      "positionTools": null,
+      "positionEducation": null
+    },
+    {
+      "companyName": "Kifly.io",
+      "companyLogo": null,
+      "companyDescription": "When the Kifly Airport Suite became production-ready, the team switched its focus to casual web and mobile development. Our main area was GIS applications for businesses and the government.",
+      "positionName": null,
+      "positionDescription": null,
+      "startDate": 2016,
+      "endDate": null,
+      "positionResponsibilities": "•\tI created proposals, specifications, documentation, and training guides for our clients.\n•\tLeading a web development team that made geographical information applications.\n•\tI developed backends for our mobile applications.",
+      "positionAchievements": null,
+      "positionSkills": "ASP.NET Web Api, JavaScript, Angular.js, MongoDB, Node.js, Ionic, and a bit of Unity.",
+      "positionTools": null,
+      "positionEducation": null
+    },
+    {
+      "companyName": "HubScience",
+      "companyLogo": null,
+      "companyDescription": "HubScience is an online human-computer information retrieval and knowledge gathering platform for publications in the life sciences. It provides an integrated environment for text annotation, data and text mining, validation, and analytics powered by machine learning technology.",
+      "positionName": "Lead developer",
+      "positionDescription": null,
+      "startDate": "Jun 2016",
+      "endDate": "Jun 2018",
+      "positionResponsibilities": "•\tAs the lead developer, I have been responsible for architecting and implementing the web application and the additional services in a team of four people.  \n•\tI developed text mining engines that processed natural science publications.",
+      "positionAchievements": "•\tI had to create a web application that proxied other websites while injecting custom code into them (the text processor and the document highlight and annotation engine) - this way, users didn't have to upload documents to our servers, only the text indices were stored (especially advantageous from a legal point of view).\n•\tI built different text mining engines based on Azure NLP and Stanford NLP Toolkit.",
+      "positionSkills": "MS Azure, MongoDB, Express.js, Angular.js (<2), ES6, Redis, Stanford NLP Toolkit, Java",
+      "positionTools": null,
+      "positionEducation": null
+    },
+    {
+      "companyName": "DentistRobot",
+      "companyLogo": null,
+      "companyDescription": "DentistRobot aimed to eliminate human inaccuracies and shorten unpleasant tooth replacement operations by introducing surgical robot technology to the dental industry. The company developed a custom hardware and software solution to take dental care to a higher level.",
+      "positionName": "CTO & Co-founder",
+      "positionDescription": null,
+      "startDate": "Aug 2017",
+      "endDate": "Dec 2020",
+      "positionResponsibilities": "•\tI managed a team of four engineers from multiple disciplines - mechanical, mechatronics, and electrical engineers - who designed and implemented working prototypes of the robot. Besides coordinating the goals and deliveries, I participated in high-level software architecture.\n•\tI authored product development roadmaps, financial plans, and presentations for potential investors and grants. This also included the understanding of medical technology-related regulatory processes. It was my duty to present the created materials as well.\n•\tI planned and organized public appearances at international exhibitions in Dubai and Toronto",
+      "positionAchievements": "•\tSince the working area was multidisciplinary, I had to equip myself with sufficient knowledge of these domains and the related technologies to understand and assist the work (including advanced mathematics, computer-controlled system theory, C, Matlab, SolidWorks, LabView) ",
+      "positionSkills": "MS Project, C#, .NET Framework",
+      "positionTools": null,
+      "positionEducation": "Health Care Technology Innovation - Lahav Executive Education, Tel Aviv University, 2019 (appreciations to the Ministry of Foreign Affairs and Trade)"
+    },
+    {
+      "companyName": "Livlia",
+      "companyLogo": null,
+      "companyDescription": "Livlia aims to change how people sell, buy or rent real estate by automation of sales-related tasks and eliminating the need for the on-site presence of a realtor.",
+      "positionName": "Co-founder & CTO",
+      "positionDescription": null,
+      "startDate": "Jun 2017",
+      "endDate": "May 2022",
+      "positionResponsibilities": "•\tAs a board member, I participated in the business development and decision-making processes, business planning, and investor relations. \n•\tMy duties involved forecasting sales and developing financial plans. Supervising their executions together with the external controlling department was necessary as well.\n•\tAs head of development, I designed the application architecture, the supporting automation services, the cloud operating environment, and the release processes using DevOps practices. The services operate at 99.99% availability (check at status.livlia.com).\n•\tI created BCP and BRP guidances, and technical documentation. I was also responsible for several regulatory-related tasks, including compliance with service-related local regulations of realtor services and GDPR compliance.\n•\tI had to select and integrate the software vendors of the application and the daily operation.\n•\tI was heavily involved in both frontend and backend-related programming tasks.",
+      "positionAchievements": null,
+      "positionSkills": "Angular (latest), Nest.js, Node.js, TypeScript, MongoDB, MS Azure, Azure DevOps, DigitalOcean, MS 365, SharePoint, PowerQuery",
+      "positionTools": "MetaBase, Raygun, Google Tag Manager, Google Optimize, Hotjar, ActiveCampaign, Mailgun…",
+      "positionEducation": null
     }
   ]
 }
