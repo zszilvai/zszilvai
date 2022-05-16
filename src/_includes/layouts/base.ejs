@@ -152,7 +152,9 @@
               </h1>
             </div>
             <div class="grow-0 shrink-0 basis-auto w-full xl:w-5/12 px-3 lg:px-6 mb-12 xl:mb-0">
-              <form netlify>
+              <form name="contact"
+                    method="POST"
+                    data-netlify="true">
                 <div class="form-group mb-6">
                   <input type="text" class="form-control block
                 w-full
@@ -167,7 +169,9 @@
                 transition
                 ease-in-out
                 m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="name"
+                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                         name="name"
+                         id="name"
                          placeholder="Name">
                 </div>
                 <div class="form-group mb-6">
@@ -184,7 +188,9 @@
                 transition
                 ease-in-out
                 m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="email"
+                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                         name="email"
+                         id="email"
                          placeholder="Email address">
                 </div>
                 <div class="form-group mb-6">
@@ -201,7 +207,9 @@
                 transition
                 ease-in-out
                 m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="phone"
+                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                         name="phone"
+                         id="phone"
                          placeholder="Phone number">
                 </div>
                 <div class="form-group mb-6">
@@ -221,11 +229,12 @@
                 ease-in-out
                 m-0
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-              " id="exampleFormControlTextarea13" rows="3" placeholder="Message"></textarea>
+              " id="message" name="message" rows="3" placeholder="Message"></textarea>
                 </div>
                 <div class="form-group form-check text-center mb-6">
                   <input type="checkbox"
                          class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
+                         name="privacy"
                          id="privacy" required>
                   <label class="form-check-label inline-block text-gray-800" for="exampleCheck87">
                     I accept the <a href="/privacy.html">Privacy Policy</a>
