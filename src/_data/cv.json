@@ -12,7 +12,8 @@
       "positionAchievements": null,
       "positionSkills": ".NET Framework, Xamarin, C#",
       "positionTools": null,
-      "positionEducation": null
+      "positionEducation": null,
+      "id": "irg-technologies"
     },
     {
       "companyName": "IIM / Weyland Technologies Kft",
@@ -26,7 +27,8 @@
       "positionAchievements": null,
       "positionSkills": "MS Azure, .NET Framework, Azure SQL, C#, Xamarin, JQuery, native Android, and a little bit of iOS in Objective C",
       "positionTools": null,
-      "positionEducation": null
+      "positionEducation": null,
+      "id": "iim-weyland-technologies-kft"
     },
     {
       "companyName": "Kifly Connect",
@@ -40,7 +42,8 @@
       "positionAchievements": "•\tThe development process involved designing the architecture in Visual Paradigm, a software modeling tool - then we transpiled the UML diagrams to Objective-C, Java, and .NET code for easy implementation of shared logic.\n•\tExperimenting with indoor positioning and navigation using various network devices, from Bluetooth beacons to Cisco routers, was fascinating.",
       "positionSkills": ".NET Framework, ASP.NET Web Api, C#, Azure SQL, Redis, Visual Paradigm, a bit of Objective-C and Java for mobile development, Jira",
       "positionTools": null,
-      "positionEducation": null
+      "positionEducation": null,
+      "id": "kifly-connect-kft"
     },
     {
       "companyName": "Kifly.io",
@@ -54,7 +57,8 @@
       "positionAchievements": null,
       "positionSkills": "ASP.NET Web Api, JavaScript, Angular.js, MongoDB, Node.js, Ionic, and a bit of Unity.",
       "positionTools": null,
-      "positionEducation": null
+      "positionEducation": null,
+      "id": "kifly-io-kft"
     },
     {
       "companyName": "HubScience",
@@ -68,7 +72,8 @@
       "positionAchievements": "•\tI had to create a web application that proxied other websites while injecting custom code into them (the text processor and the document highlight and annotation engine) - this way, users didn't have to upload documents to our servers, only the text indices were stored (especially advantageous from a legal point of view).\n•\tI built different text mining engines based on Azure NLP and Stanford NLP Toolkit.",
       "positionSkills": "MS Azure, MongoDB, Express.js, Angular.js (<2), ES6, Redis, Stanford NLP Toolkit, Java",
       "positionTools": null,
-      "positionEducation": null
+      "positionEducation": null,
+      "id": "hubscience-kft"
     },
     {
       "companyName": "DentistRobot",
@@ -82,7 +87,8 @@
       "positionAchievements": "•\tSince the working area was multidisciplinary, I had to equip myself with sufficient knowledge of these domains and the related technologies to understand and assist the work (including advanced mathematics, computer-controlled system theory, C, Matlab, SolidWorks, LabView) ",
       "positionSkills": "MS Project, C#, .NET Framework",
       "positionTools": null,
-      "positionEducation": "Health Care Technology Innovation - Lahav Executive Education, Tel Aviv University, 2019 (appreciations to the Ministry of Foreign Affairs and Trade)"
+      "positionEducation": "Health Care Technology Innovation - Lahav Executive Education, Tel Aviv University, 2019 (appreciations to the Ministry of Foreign Affairs and Trade)",
+      "id": "dentistrobot-kft"
     },
     {
       "companyName": "Livlia",
@@ -96,7 +102,8 @@
       "positionAchievements": null,
       "positionSkills": "Angular (latest), Nest.js, Node.js, TypeScript, MongoDB, MS Azure, Azure DevOps, DigitalOcean, MS 365, SharePoint, PowerQuery",
       "positionTools": "MetaBase, Raygun, Google Tag Manager, Google Optimize, Hotjar, ActiveCampaign, Mailgun…",
-      "positionEducation": null
+      "positionEducation": null,
+      "id": "livlia-kft"
     }
   ]
 }

@@ -3,9 +3,13 @@ permalink: cv.html
 title: Resume
 ---
 
-<ol class="border-l border-gray-300">
-    <%for (item of cv.items.reverse()) { %>
-    <li>
+<ol class="border-l border-gray-300 relative overflow-y-scroll" style="height:500px"
+    data-bs-spy="scroll"
+    data-bs-target="#cv-scrollspy"
+    data-bs-offset="200"
+    class="scrollspy-example">
+    <%for (item of cv.items.slice().reverse()) { %>
+    <li id="<%=item.id%>">
         <div class="flex flex-start items-center pt-3">
             <div class="bg-gray-300 w-2 h-2 rounded-full -ml-1 mr-3"></div>
             <p class="text-gray-500 text-sm"><%= item.startDate %><%if(item.endDate) { %> - <%= item.endDate %><% } %></p>
@@ -36,9 +40,6 @@ title: Resume
             <% } %>
         </div>
     </li>
-
-
-
     <% } %>
 </ol>
 
