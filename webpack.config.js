@@ -54,6 +54,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
+      { test: /\.svg$/, use: ['file-loader'] },
       {
         test: /\.(gif|png|jpg|jpeg)$/i,
         use: [
