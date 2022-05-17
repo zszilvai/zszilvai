@@ -127,5 +127,157 @@
       "level": "In progress",
       "percentage": "25"
     }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "items": [
+        {
+          "name": "TypeScript",
+          "groupItems": ["TypeScript", "Angular (latest)", "Ionic"],
+          "icon": "/assets/icons/icons8-typescript-96.png",
+          "color": "#1976D2"
+        },
+        {
+          "name": "JavaScript",
+          "groupItems": ["Angular.js", "ES6"],
+          "icon": "/assets/icons/icons8-javascript-96.png",
+          "color": "#ffd600",
+          "text": "text-black"
+        },
+        {
+          "name": "Angular",
+          "groupItems": ["Angular (latest)"],
+          "icon": "/assets/icons/icons8-angularjs-96.png",
+          "color": "#B71C1C"
+        },
+        {
+          "name": "Node.js",
+          "groupItems": [],
+          "icon": "/assets/icons/icons8-node-js-96.png",
+          "color": "#3C873A"
+        },
+        {
+          "name": "Nest.js",
+          "groupItems": [],
+          "icon": "/assets/icons/nestjs-96.png"
+        },
+        {
+          "name": "Nx",
+          "groupItems": [],
+          "icon": "/assets/icons/nx-96.png"
+        },
+        {
+          "name": "C#",
+          "groupItems": [".NET", "Unity", "Xamarin", "C#"],
+          "icon": "/assets/icons/icons8-c-sharp-logo-96.png",
+          "color": "#455A64"
+        }
+      ]
+    },
+    {
+      "name": "Databases",
+      "items": [
+        {
+          "name": "MongoDB",
+          "groupItems": ["MongoDB", "Mongoose", "Mongoose-OID", "Mongoose-Timestamps"],
+          "icon": "/assets/icons/icons8-mongodb-96.png",
+          "color": "#00C853"
+        },
+        {
+          "name": "MsSql",
+          "groupItems": ["Azure SQL", "MSSQL", "MS SQL Server", "T-SQL"],
+          "icon": "/assets/icons/azure-sql-logo.png",
+          "color": "#2687CE"
+        },
+        {
+          "name": "Redis",
+          "groupItems": ["Redis"],
+          "icon": "/assets/icons/icons8-redis-96.png",
+          "color": "#B81D1C"
+        }
+      ]
+    },
+    {
+      "name": "Operations",
+      "items": [
+        {
+          "name": "MS Azure",
+          "groupItems": [],
+          "icon": "/assets/icons/icons8-azure-storage-connection-96.png",
+          "color": "#2979FF"
+        },
+        {
+          "name": "Azure DevOps",
+          "groupItems": [],
+          "icon": "/assets/icons/icons8-azure-storage-connection-96.png",
+          "color": "#2979FF"
+        },
+        {
+          "name": "Digital Ocean",
+          "groupItems": ["Digital Ocean"],
+          "icon": "/assets/icons/digital-ocean-logo-7B970FE624-seeklogo.com.png"
+        }
+      ]
+    },
+    {
+      "name": "Tools",
+      "items": [
+        {
+          "name": "Visual Studio",
+          "groupItems": [
+            "Visual Studio",
+            "Visual Studio Code",
+            "Visual Studio Team Services",
+            "Visual Studio Team Foundation Server"
+          ],
+          "icon": "/assets/icons/icons8-visual-studio-96.png"
+        },
+        {
+          "name": "WebStorm",
+          "groupItems": ["WebStorm"],
+          "icon": "/assets/icons/icons8-webstorm-96.png"
+        },
+        {
+          "name": "Git",
+          "groupItems": ["Git", "GitHub", "GitLab", "Bitbucket"],
+          "icon": "/assets/icons/icons8-git-48.png"
+        }
+      ]
+    },
+    {
+      "name": "Office",
+      "items": [
+        {
+          "name": "MS Office",
+          "groupItems": [],
+          "icon": "/assets/icons/icons8-office-365-96.png"
+        },
+        {
+          "name": "MS Excel",
+          "groupItems": ["MS Excel", "PowerQuery"],
+          "icon": "/assets/icons/icons8-microsoft-excel-2019-96.png"
+        },
+        {
+          "name": "PowerQuery",
+          "icon": "/assets/icons/pq-icon-150x150.png"
+        }
+      ]
+    },
+    {
+      "name": "Other",
+      "items": [
+        {
+          "name": "Driver's license Cat. B",
+          "groupItems": ["Driver's license"],
+          "icon": "/assets/icons/icons8-car-96.png"
+        },
+        {
+          "name": "Mensa HungarIQa",
+          "groupItems": ["Mensa HungarIQa"],
+          "icon": "/assets/icons/mensa-logo-96.png"
+        }
+      ]
+    }
   ]
 }
