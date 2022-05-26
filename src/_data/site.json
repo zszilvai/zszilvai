@@ -4,5 +4,6 @@
   "description": "Software engineer, entrepreneur",
   "url": "https://szilvai.hu",
   "locale": "en",
-  "author": "Zoltan Szilvai"
+  "author": "Zoltan Szilvai",
+  "pageWidth": "restriction"
 }
