@@ -1,6 +1,7 @@
 ---
 permalink: cv.html
 title: Resume
+pageWidth: 'restricted'
 ---
 
 <!--<div class="invisible">-->
@@ -16,76 +17,89 @@ title: Resume
 
 <script>
   $(function (){
-    $('.skillCheck').on('click', function() {
-      console.log('here')
+    $('.feature-selector').on('click', function() {
       var skill = $(this).attr('id');
-      var checked = $(this).is(':checked');
+      var checked = !$(this).hasClass('active');
       if (checked) {
+        $(this).addClass('active');
         $('.' + skill).show();
       } else {
+        $(this).removeClass('active');
         $('.' + skill).hide();
       }
     });
   })
 </script>
 
-<div class="flex flex-col col-span-1 place-content-center cv-scrollspy"
-     data-bs-spy="scroll"
-     data-bs-offset="200">
-    <div class="flex self-center">
-        <div class="md:space-x-1 space-y-1 md:space-y-0 mb-4">
-            <a class="inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-               data-bs-toggle="collapse"
-               href="#selectSkills"
-               role="button"
-               aria-expanded="false"
-               aria-controls="selectSkills">
-                Select details to show
-            </a>
-        </div>
-    </div>
-    <div class="collapse" id="selectSkills">
-        <div class="block p-6 rounded-lg shadow-lg bg-white">
-            <div class="flex justify-center">
-                <div>
-                    <div class="form-check">
-                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                               type="checkbox"
-                               value=""
-                               id="companyAbout"
-                                checked>
-                        <label class="form-check-label inline-block text-gray-800" for="companyAbout">
-                            Show company about
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                               type="checkbox"
-                               value=""
-                               id="managerial">
-                        <label class="form-check-label inline-block text-gray-800" for="managerial">
-                            Show managerial experience
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                               type="checkbox"
-                               value=""
-                               id="programming">
-                        <label class="form-check-label inline-block text-gray-800" for="programming">
-                            Show programming experience
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                               type="checkbox"
-                               value=""
-                               id="technologies">
-                        <label class="form-check-label inline-block text-gray-800" for="technologies">
-                            Show used technologies
-                        </label>
-                    </div>
-                </div>
+<!--<div class="flex flex-col col-span-1 place-content-center cv-scrollspy print-preview-hide"-->
+<!--     data-bs-spy="scroll"-->
+<!--     data-bs-offset="200">-->
+<!--    <div class="flex self-center">-->
+<!--        <div class="md:space-x-1 space-y-1 md:space-y-0 mb-4">-->
+<!--            <a class="inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"-->
+<!--               data-bs-toggle="collapse"-->
+<!--               href="#selectSkills"-->
+<!--               role="button"-->
+<!--               aria-expanded="false"-->
+<!--               aria-controls="selectSkills">-->
+<!--                Select details to show-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="collapse" id="selectSkills">-->
+<!--        <div class="block p-6 rounded-lg shadow-lg bg-white">-->
+<!--            <div class="flex justify-center">-->
+<!--                <div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"-->
+<!--                               type="checkbox"-->
+<!--                               value=""-->
+<!--                               id="companyAbout"-->
+<!--                                checked>-->
+<!--                        <label class="form-check-label inline-block text-gray-800" for="companyAbout">-->
+<!--                            Show company about-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"-->
+<!--                               type="checkbox"-->
+<!--                               value=""-->
+<!--                               id="managerial">-->
+<!--                        <label class="form-check-label inline-block text-gray-800" for="managerial">-->
+<!--                            Show managerial experience-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"-->
+<!--                               type="checkbox"-->
+<!--                               value=""-->
+<!--                               id="programming">-->
+<!--                        <label class="form-check-label inline-block text-gray-800" for="programming">-->
+<!--                            Show programming experience-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"-->
+<!--                               type="checkbox"-->
+<!--                               value=""-->
+<!--                               id="technologies">-->
+<!--                        <label class="form-check-label inline-block text-gray-800" for="technologies">-->
+<!--                            Show used technologies-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<div class="flex flex-col items-center print-preview-hide py-5">
+    <div class="inline-flex shadow-md hover:shadow-lg focus:shadow-lg" role="group">
+        <div class="flex items-center justify-center">
+            <div class="inline-flex shadow-md hover:shadow-lg focus:shadow-lg" role="toolbar">
+                <button type="button" role="checkbox" id="company" class="active select-button feature-selector rounded-l">Company about</button>
+                <button type="button" role="checkbox" id="programming" class="active select-button feature-selector ">Programming experience</button>
+                <button type="button" role="checkbox" id="managerial" class="active select-button feature-selector ">Managerial experience</button>
+                <button type="button" role="checkbox" id="skills" class="active select-button feature-selector rounded-r">Skills</button>
             </div>
         </div>
     </div>
@@ -93,56 +107,55 @@ title: Resume
 <div class="flex flex-col">
     <%for (item of cv.items.slice().reverse()) { %>
     <div class="flex flex-row">
-        <div class="w-1/3">
-            <div class="mt-3">
-                <small class="companyAbout">
-                    <%= item.companyDescription %>
-                </small>
+        <div class="sm:hidden lg:block lg:w-1/3 print-preview-hide">
+            <div class="text-justify pr-5" style="margin-top:7.625rem">
+                <%- include('./_includes/layouts/additional-info', {item: item}); %>
             </div>
         </div>
-        <div class="w-2/3 border-l border-yellow-500">
+        <div class="w-full lg:w-2/3 print-preview-full border-l border-yellow-500">
             <div class="flex flex-start items-center pt-3">
-                <div class="bg-yellow-500 w-5 h-5 rounded-full -ml-2.5 mr-3"></div>
+                <div class="bg-yellow-500 w-5 h-5 rounded-full -ml-2.5 mr-3"> </div>
                 <p class="text-yellow-500 font-bold text-sm"><%= item.startDate %><%if(item.endDate) { %> - <%= item.endDate %><% } %></p>
             </div>
-            <div class="mt-3 ml-3 text-sm">
+            <div class="ml-3 text-sm">
                 <h3 class="mb-0.5">
                     <%= item.positionName %>
                 </h3>
                 <h4 class="mb-1.5">
                     <%= item.companyName %>
                 </h4>
+                <div class="text-justify lg:hidden print-preview-visible">
+                    <%- include('./_includes/layouts/additional-info', {item: item}); %>
+                </div>
                 <%if (item.positionDescription) { %>
-                    <p class="text-gray-700 mb-3">
+                    <p class="text-gray-700 mb-3 text-justify">
                         <%= item.positionDescription %>
                     </p>
                 <% } %>
                 <%if(item.positionResponsibilities) { %>
-                <p class="text-gray-700 mb-3">
-                    My responsibilities:
+                <p class="text-sm font-extrabold italic mb-3">My responsibilities:</p>
                 <ul>
                     <%for (skill of item.positionResponsibilities.split('\n')) { %>
-                        <li>
+                        <li class="text-justify">
                             <%= skill %>
                         </li>
                     <% } %>
                 </ul>
-                </p>
                 <% } %>
                 <%if(item.positionAchievements) { %>
-                <p class="text-gray-500 mb-3">
-                    Interesting tasks I faced:
+                <p class="text-sm font-extrabold italic my-3">Interesting tasks I faced:</p>
                 <ul>
                     <%for (skill of item.positionAchievements.split('\n')) { %>
-                        <li>
+                        <li class="text-justify">
                             <%= skill %>
                         </li>
                     <% } %>
                 </ul>
-                </p>
+
                 <% } %>
                 <%if (item.positionEducation) { %>
-                    <p class="text-gray-500 mb-3">
+                <p class="text-sm font-extrabold italic my-3">Additional education</p>
+                    <p class="text-gray-500 mb-3 text-justify">
                         <%= item.positionEducation %>
                     </p>
                 <% } %>

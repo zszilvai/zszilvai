@@ -9,8 +9,8 @@ permalink: skills.html
     }
 %>
 <div class="flex flex-row flex-wrap w-full justify-center">
-    <div class="w-full md:w-1/2 md:pr-2">
-        <h2>Skills</h2>
+    <div class="w-full md:w-1/2 p-2 print-preview-full ">
+        <h3>Skills</h3>
         <small class="italic">
             Although I work with a lot of different technologies, I never lose my lose focus a.
         </small>
@@ -18,7 +18,7 @@ permalink: skills.html
         <ul class="mt-5">
             <li class="mb-5">
                 <%=skill.name%>
-                <div class="flex flex-wrap justify-center space-x-2 items-end">
+                <div class="flex flex-wrap space-x-2 items-end">
                     <%for(item of skill.items){%>
                   <span class="rounded-full
                   <%=item.text || (item.color ? 'text-gray-100' : 'text-gray-600')%>
@@ -33,10 +33,10 @@ permalink: skills.html
                   duration-300
                   ease
                   mt-2
-                  w-max" style="background-color: <%=item.color%>">
-                    <img class="rounded-full w-9 h-9 max-w-none" alt="A"
+                  w-max" style="background-color: <%=item.color%>; -webkit-print-color-adjust: economy">
+                    <img class="rounded-full w-9 h-9 max-w-none print-preview-hide" alt="A"
                          src="<%=item.icon%>" />
-                    <span class="flex items-center px-3 py-2">
+                    <span class="flex items-center px-3 py-2 print-preview-chip">
                       <%=item.name%>
                     </span>
 <!--                    <button class="bg-transparent hover focus:outline-none">-->
@@ -55,18 +55,18 @@ permalink: skills.html
         </ul>
         <%}%>
     </div>
-    <div class="w-full md:w-1/2 pt-3 md:pt-0 md:pl-2">
-        <h2>Languages:</h2>
+    <div class="w-full md:w-1/2 p-2 print-preview-full">
+        <h3>Languages:</h3>
         <ul class="text-gray-900">
             <%for (language of cv.languages) {%>
             <li>
-                <div class="flex flex-row items-center mt-2">
-                    <div class="w-1/5">
+                <div class="flex flex-row flex-wrap items-center mt-2">
+                    <div class="w-1/5  print-preview-full">
                         <%=language.name%>
                     </div>
-                    <div class="w-4/5">
+                    <div class="w-4/5 print-preview-full">
                         <div class="w-full bg-transparent">
-                            <div class="h-9
+                            <div class="print-preview-lanuage-bar
                                         bg-yellow-500
                                         text-sm
                                         font-semibold

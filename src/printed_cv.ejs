@@ -1,0 +1,121 @@
+---
+permalink: printed_cv.html
+title: Resume
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MMBW638');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <title><%= title %></title>
+    <meta
+            name="description"
+            content="<%= (!!locals.description) ? description : site.description %>"
+    />
+    <meta name="author" content="<%= site.author %>" />
+    <meta property="og:title" content="<%= title %>" />
+    <meta
+            property="og:description"
+            content="<%= (!!locals.description) ? description : site.description %>"
+    />
+    <meta property="og:locale" content="<%= site.locale %>" />
+    <meta property="og:site_name" content="<%= site.site_name %>" />
+    <% if (locals.tags == "posts") { %>
+        <meta property="og:type" content="article" />
+        <meta property="article:published_time" content="<%= date.toISOString() %>" />
+        <script type="application/ld+json">
+      {
+        "description": "<%= (!!locals.description) ? description : site.description %>",
+        "author": { "@type": "Person", "name": "<%= site.author %>" },
+        "@type": "BlogPosting",
+        "url": "<%= `${site.url}${page.url}` %>",
+        "publisher": {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "<%= `${site.url}/assets/images/portrait_small.jpg` %>"
+          },
+          "name": "<%= site.author %>"
+        },
+        "headline": "<%= title %>",
+        "datePublished": "<%= date.toISOString() %>",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "<%= `${site.url}${page.url}` %>"
+        },
+        "@context": "http://schema.org"
+      }
+    </script>
+    <% } %><%- include('./_includes/layouts/webpack.ejs') %> <% if (page.url == "/") { %>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script>
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on('init', (user) => {
+              if (!user) {
+                window.netlifyIdentity.on('login', () => {
+                  document.location.href = '/admin/';
+                });
+              }
+            });
+          }
+        </script>
+    <% } %>
+</head>
+
+<body class="antialiased w-full text-gray-700  content-bg">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMBW638"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+<script>
+  $(function (){
+    // binding an anonymous function to handle the change event:
+    $('#privacy').on('click', function () {
+      if ($(this).is(':checked')) {
+        $('#submit').prop('disabled', false);
+      } else {
+        $('#submit').prop('disabled', true);
+      }
+    });
+
+    $('#showContactDetails').on('click', function () {
+      $('#contactDetailsHolder').html(atob('PGEgaHJlZj0ibWFpbHRvOmluZm9Ac3ppbHZhaS5odSI+aW5mb0BzemlsdmFpLmh1PC9hPjxici8+PGEgaHJlZj0idGVsOiszNjcwNDMzNzAwMCI+KzM2IDcwIDQzMyA3MDAwPC9hPg=='));
+    });
+  })
+</script>
+<div class="page">
+
+    <style>
+        @page {
+            margin: 1.5cm;
+        }
+    </style>
+    <div class="flex flex-row  print-preview">
+        <div class="w-1/3">
+            <%-include('./skills.ejs')%>
+        </div>
+        <div class="w-2/3">
+            <%-include('./cv.ejs')%>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+

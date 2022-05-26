@@ -1,3 +1,6 @@
+// eslint:disable-next-line
+// const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   purge: ['./src/**/*.ejs', './src/**/*.md'],
   theme: {
@@ -44,10 +47,14 @@ module.exports = {
     extend: {
       opacity: ['disabled'],
       cursor: ['disabled'],
+      backgroundColor: ['active'],
     },
   },
   plugins: [
     // eslint-disable-next-line
     require('tw-elements/dist/plugin'),
+    // plugin(function({ addVariant }) {
+    //   addVariant('print', '&:loading')
+    // })
   ],
 };
