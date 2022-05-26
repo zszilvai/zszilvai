@@ -1,6 +1,7 @@
 ---
 title: Skills
 permalink: skills.html
+pageWidth: 'restricted'
 ---
 <%
     getTag = function(item){
@@ -18,7 +19,7 @@ permalink: skills.html
         <ul class="mt-5">
             <li class="mb-5">
                 <%=skill.name%>
-                <div class="flex flex-wrap space-x-2 items-end">
+                <div class="flex flex-wrap justify-around">
                     <%for(item of skill.items){%>
                   <span class="rounded-full
                   <%=item.text || (item.color ? 'text-gray-100' : 'text-gray-600')%>
@@ -86,9 +87,11 @@ permalink: skills.html
             </li>
             <%}%>
         </ul>
-        <h2 class="pt-3">
+        <h3 class="pt-3">
             Awards:
-            <span class="rounded-full
+        </h3>
+        <div class="flex flex-wrap items-end">
+        <span class="rounded-full
             text-gray-500
             bg-gray-200
             font-semibold
@@ -100,13 +103,13 @@ permalink: skills.html
             align-center
             transition
             duration-300
-            ease w-max">
-                <img class="rounded-full w-9 h-9 max-w-none" alt="A"
+            ease w-max align-middle">
+                <img class="rounded-full w-9 h-9 max-w-none print-preview-hide" alt="A"
                      src="/assets/icons/oitm.png" />
-                <span class="flex items-center px-3 py-2">
+                <span class="flex items-center px-3 py-2 flex-wrap">
                   V. Országos IT Megmérettetés - Angular I. place
                 </span>
           </span>
-        </h2>
+        </div>
     </div>
 </div>
