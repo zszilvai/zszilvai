@@ -94,10 +94,10 @@
     })
   </script>
   <%- include('./header.ejs')%>
-  <div class="max-w-screen-lg mx-auto min-h-screen">
-    <div class="text-xl py-5 ">
-      <%- content %>
-    </div>
+  <div class="<%=pageWidth==='restricted' ? 'max-w-screen-lg' : ''%> mx-auto min-h-screen">
+    <%- content %>
+  </div>
+  <div class="max-w-screen-lg mx-auto">
     <%- include('./footer.ejs')%>
   </div>
   </body>

@@ -23,27 +23,27 @@ a:hover {
 }
 
 h1 {
-  @apply text-5xl font-bold mt-12 mb-5 leading-10;
+  @apply text-5xl font-bold mb-5 leading-10;
 }
 
 h2 {
-  @apply text-4xl font-bold mt-10 mb-5;
+  @apply text-4xl font-bold mb-5;
 }
 
 h3 {
-  @apply text-3xl font-bold mt-10 mb-5;
+  @apply text-3xl font-bold mb-5;
 }
 
 h4 {
-  @apply text-2xl font-bold mt-10 mb-5;
+  @apply text-2xl font-bold mb-5;
 }
 
 h5 {
-  @apply text-xl font-bold mt-10 mb-5;
+  @apply text-xl font-bold mb-5;
 }
 
 h6 {
-  @apply text-lg font-bold mt-10 mb-5;
+  @apply text-lg font-bold mb-5;
 }
 
 .content ul,
@@ -132,3 +132,74 @@ h6 {
 //  background-repeat: no-repeat;
 //  background-attachment: fixed;
 //}
+
+.print-preview .print-preview-full {
+  @apply w-full;
+}
+.print-preview .print-preview-visible {
+  @apply block;
+}
+.print-preview .print-preview-chip {
+  @apply py-0;
+}
+.print-preview .print-preview-lanuage-bar {
+  @apply py-0;
+}
+
+.print-preview .print-preview-hide {
+  @apply hidden;
+}
+
+@media print {
+  .print-preview-full {
+    @apply w-full;
+  }
+  .print-preview-hide {
+    @apply hidden;
+  }
+  .print-preview-visible {
+    @apply block;
+  }
+  .print-preview-chip {
+    @apply py-0;
+    @apply text-gray-500
+  }
+  .print-preview-lanuage-bar {
+    @apply py-0;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+.select-button {
+  @apply px-6;
+  @apply py-2;
+  @apply border-t-2 border-b-2 border-yellow-500;
+  @apply text-yellow-500;
+  @apply font-medium;
+  @apply text-xs;
+  @apply leading-tight;
+  @apply uppercase;
+  @apply hover:bg-black hover:bg-opacity-5;
+  @apply focus:outline-none focus:ring-0;
+  @apply transition;
+  @apply duration-150;
+  @apply ease-in-out;
+
+  &.active {
+    @apply bg-yellow-500;
+    @apply text-black;
+  }
+}
+
+.cover-photo {
+  height: calc(100vh - 72px);
+  width: calc((100vh - 72px)*0.783);
+}
+
+.cover-photo-holder {
+  height: calc(100vh - 72px);
+  width: 100%
+}
