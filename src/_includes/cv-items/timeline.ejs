@@ -181,7 +181,7 @@
                     <ul class="ml-5 list-disc">
                         <%for (skill of item.positionResponsibilities) { %>
                         <li class="text-justify <%=skill.type%> list-item">
-                            <%= skill.text %>
+                            <p><%= skill.text %></p>
                         </li>
                         <% } %>
                     </ul>
@@ -191,7 +191,7 @@
                     <ul class="ml-5 list-disc">
                         <%for (skill of item.positionAchievements.split('\n')) { %>
                             <li class="text-justify">
-                                <%= skill %>
+                                <p><%= skill %></p>
                             </li>
                         <% } %>
                     </ul>
