@@ -1,0 +1,222 @@
+<script>
+  function adjustCSSRules(selector, props, sheets){
+    // get stylesheet(s)
+    if (!sheets) sheets = [...document.styleSheets];
+    else if (sheets.sup){    // sheets is a string
+      let absoluteURL = new URL(sheets, document.baseURI).href;
+      sheets = [...document.styleSheets].filter(i => i.href == absoluteURL);
+    }
+    else sheets = [sheets];  // sheets is a stylesheet
+
+    // CSS (& HTML) reduce spaces in selector to one.
+    selector = selector.replace(/\s+/g, ' ');
+    const findRule = s => [...s.cssRules].reverse().find(i => i.selectorText == selector)
+    let rule = sheets.map(findRule).filter(i=>i).pop()
+
+    const propsArr = props.sup
+      ? props.split(/\s*;\s*/).map(i => i.split(/\s*:\s*/)) // from string
+      : Object.entries(props);                              // from Object
+
+    if (rule) for (let [prop, val] of propsArr){
+      // rule.style[prop] = val; is against the spec, and does not support !important.
+      rule.style.setProperty(prop, ...val.split(/ *!(?=important)/));
+    }
+    else {
+      sheet = sheets.pop();
+      if (!props.sup) props = propsArr.reduce((str, [k, v]) => `${str}; ${k}: ${v}`, '');
+      sheet.insertRule(`${selector} { ${props} }`, sheet.cssRules.length);
+    }
+  }
+  function updateQueryStringParameter(key, value) {
+      var searchParams = new URLSearchParams(window.location.search)
+      searchParams.set(key, value);
+      var newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
+      history.pushState(null, '', newRelativePathQuery);
+  }
+  function getQueryParams() {
+    return new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+  }
+  $(function (){
+    $('.feature-selector').on('click', function() {
+      var skill = $(this).attr('id');
+      var checked = !$(this).hasClass('active');
+      var qp = getQueryParams();
+      var hiddenFeatures = qp.hideFeatures;
+      if (hiddenFeatures) {
+        hiddenFeatures = hiddenFeatures.split(',');
+      }
+      else {
+        hiddenFeatures = [];
+      }
+      if (checked) {
+        $(this).addClass('active');
+        // $('.' + skill).css({'display': 'block!important'});
+        // document.styleSheets[0].addRule('.' + skill, 'display: block!important');
+        adjustCSSRules('.' + skill, 'display: block !important');
+        hiddenFeatures = hiddenFeatures.filter(x=>x!==skill);
+      } else {
+        $(this).removeClass('active');
+        // $('.' + skill).css({'display': 'none'});
+        adjustCSSRules('.' + skill, 'display: none');
+        hiddenFeatures.push(skill);
+      }
+
+      updateQueryStringParameter('hideFeatures', hiddenFeatures.join(','));
+    });
+
+    var queryParams = getQueryParams();
+    if(queryParams.hideFeatures) {
+        var features = queryParams.hideFeatures.split(',');
+        for(var i = 0; i < features.length; i++) {
+            $('#' + features[i]).click();
+        }
+    }
+  })
+</script>
+
+<!--<div class="flex flex-col col-span-1 place-content-center cv-scrollspy print-preview-hide"-->
+<!--     data-bs-spy="scroll"-->
+<!--     data-bs-offset="200">-->
+<!--    <div class="flex self-center">-->
+<!--        <div class="md:space-x-1 space-y-1 md:space-y-0 mb-4">-->
+<!--            <a class="inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"-->
+<!--               data-bs-toggle="collapse"-->
+<!--               href="#selectSkills"-->
+<!--               role="button"-->
+<!--               aria-expanded="false"-->
+<!--               aria-controls="selectSkills">-->
+<!--                Select details to show-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="collapse" id="selectSkills">-->
+<!--        <div class="block p-6 rounded-lg shadow-lg bg-white">-->
+<!--            <div class="flex justify-center">-->
+<!--                <div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"-->
+<!--                               type="checkbox"-->
+<!--                               value=""-->
+<!--                               id="companyAbout"-->
+<!--                                checked>-->
+<!--                        <label class="form-check-label inline-block text-gray-800" for="companyAbout">-->
+<!--                            Show company about-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"-->
+<!--                               type="checkbox"-->
+<!--                               value=""-->
+<!--                               id="managerial">-->
+<!--                        <label class="form-check-label inline-block text-gray-800" for="managerial">-->
+<!--                            Show managerial experience-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"-->
+<!--                               type="checkbox"-->
+<!--                               value=""-->
+<!--                               id="programming">-->
+<!--                        <label class="form-check-label inline-block text-gray-800" for="programming">-->
+<!--                            Show programming experience-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="skillCheck form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"-->
+<!--                               type="checkbox"-->
+<!--                               value=""-->
+<!--                               id="technologies">-->
+<!--                        <label class="form-check-label inline-block text-gray-800" for="technologies">-->
+<!--                            Show used technologies-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="flex flex-col">
+    <%for (item of cv.items.slice().reverse()) { %>
+        <div class="flex flex-row">
+            <div class="hidden lg:block lg:w-1/3 print-preview-hide">
+                <div class="text-justify pr-5" style="margin-top:7.625rem">
+                    <%- include('./company-info', {item: item}); %>
+                    <%- include('./skill-chips', {item: item}); %>
+                </div>
+            </div>
+            <div class="w-full lg:w-2/3 print-preview-full border-l border-yellow-500">
+                <div class="flex flex-start items-center pt-3">
+                    <div class="bg-yellow-500 w-5 h-5 rounded-full -ml-2.5 mr-3"> </div>
+                    <p class="text-yellow-500 font-bold"><%= item.startDate %><%if(item.endDate) { %> - <%= item.endDate %><% } %></p>
+                </div>
+                <div class="ml-3">
+                    <h3 class="mb-0.5">
+                        <%= item.positionName %>
+                    </h3>
+                    <h4 class="mb-1.5">
+                        <%= item.companyName %>
+                    </h4>
+                    <div class="text-justify lg:hidden print-preview-visible">
+                        <%- include('./company-info', {item: item}); %>
+                    </div>
+                    <%if (item.positionDescription) { %>
+                        <p class="text-gray-700 mb-3 text-justify">
+                            <%= item.positionDescription %>
+                        </p>
+                    <% } %>
+                    <%if(item.positionResponsibilities) { %>
+                    <p class="font-extrabold italic mb-3 programming managerial">My responsibilities:</p>
+                    <ul>
+                        <%for (skill of item.positionResponsibilities) { %>
+                        <li class="text-justify <%=skill.type%>">
+                            <%= skill.text %>
+                        </li>
+                        <% } %>
+                    </ul>
+                    <% } %>
+                    <%if(item.positionAchievements) { %>
+                    <p class="font-extrabold italic my-3">Interesting tasks I faced:</p>
+                    <ul>
+                        <%for (skill of item.positionAchievements.split('\n')) { %>
+                            <li class="text-justify">
+                                <%= skill %>
+                            </li>
+                        <% } %>
+                    </ul>
+
+                    <% } %>
+                    <%if (item.positionEducation) { %>
+                        <p class="font-extrabold italic my-3">Additional education</p>
+                        <p class="text-gray-500 mb-3 text-justify">
+                            <%= item.positionEducation %>
+                        </p>
+                    <% } %>
+                    <div class="lg:hidden print-preview-visible">
+                        <%- include('./skill-chips', {item: item}); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <%}%>
+</div>
+<div class="fixed bottom-0 w-fit lg:w-1/5 right-0 print-preview-hide bg-white border-2 border-yellow-500 rounded-xl">
+    <h4 class="text-yellow-500 mb-2 bl-3 active pl-3" data-bs-toggle="collapse" data-bs-target="#features" aria-expanded="true" aria-controls="features" onclick="$(this).hasClass('active') ? $(this).removeClass('active') : $(this).addClass('active')">
+        Choose features <span id="close-arrow">▼</span><span id="open-arrow">▲</span>
+    </h4>
+    <small class="p-3">View the <a href="javascript://" onclick="window.location='printed_cv.html'+window.location.search;">printable</a> edition</small>
+    <div id="features" class="flex flex-col items-center collapse show">
+        <div class="inline-flex shadow-md hover:shadow-lg focus:shadow-lg" role="group">
+            <div class="flex  items-center justify-center">
+                <div class="inline-flex flex-wrap shadow-md hover:shadow-lg focus:shadow-lg" role="toolbar">
+                    <button type="button" role="checkbox" id="company" class="active select-button feature-selector rounded-l">Company about</button>
+                    <button type="button" role="checkbox" id="programming" class="active select-button feature-selector ">Programming experience</button>
+                    <button type="button" role="checkbox" id="managerial" class="active select-button feature-selector ">Managerial experience</button>
+                    <button type="button" role="checkbox" id="skills" class="active select-button feature-selector rounded-r">Skills</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -23,7 +23,20 @@
       "positionDescription": null,
       "startDate": 2012,
       "endDate": 2014,
-      "positionResponsibilities": "•\tArchitecting our solutions, then implementing and operating the backend of the applications in the cloud.\n•\tAs a software engineer, I gained a comprehensive overview of different technologies and usages during the prototype development of ideas ranging from avalanche alarm systems to mobile applications for fast fashion stores. \n•\tBootstrapping these ideas and trying to turn them into real businesses shaped the entrepreneur inside me.",
+      "positionResponsibilities": [
+        {
+          "text": "•\tArchitecting our solutions, then implementing and operating the backend of the applications in the cloud.",
+          "type": "programming"
+        },
+        {
+          "text": "•\tAs a software engineer, I gained a comprehensive overview of different technologies and usages during the prototype development of ideas ranging from avalanche alarm systems to mobile applications for fast fashion stores. ",
+          "type": "programming"
+        },
+        {
+          "text": "•\tBootstrapping our ideas and trying to turn them into real businesses shaped the entrepreneur inside me.",
+          "type": "managerial"
+        }
+      ],
       "positionAchievements": null,
       "positionSkills": "MS Azure, .NET Framework, Azure SQL, C#, Xamarin, JQuery, native Android, and a little bit of iOS in Objective C",
       "positionTools": null,
@@ -38,7 +51,24 @@
       "positionDescription": null,
       "startDate": "Sep 2014",
       "endDate": "Dec-15",
-      "positionResponsibilities": "•\tCoordinating an Android, an iOS, and a web development team - 10 people - and designing the platform-independent, shared structure and logic of the applications. \n•\tI architected and implemented the databases and the backend services as well. \n•\tIt became my duty to introduce and manage agile practices in the development process.\n•\tAs a shareholder, I was part of the decision-making processes and on-site negotiations with potential clients, suppliers, and potential partners for the overseas expansion.",
+      "positionResponsibilities": [
+        {
+          "text": "•\tCoordinating an Android, an iOS, and a web development team - 10 people - and designing the platform-independent, shared structure and logic of the applications. ",
+          "type": "programming managerial"
+        },
+        {
+          "text": "•\tI architected and implemented the databases and the backend services as well. ",
+          "type": "programming"
+        },
+        {
+          "text": "•\tIt became my duty to introduce and manage agile practices in the development process.",
+          "type": "programming managerial"
+        },
+        {
+          "text": "•\tAs a shareholder, I was part of the decision-making processes and on-site negotiations with potential clients, suppliers, and potential partners for the overseas expansion.",
+          "type": "managerial"
+        }
+      ],
       "positionAchievements": "•\tThe development process involved designing the architecture in Visual Paradigm, a software modeling tool - then we transpiled the UML diagrams to Objective-C, Java, and .NET code for easy implementation of shared logic.\n•\tExperimenting with indoor positioning and navigation using various network devices, from Bluetooth beacons to Cisco routers, was fascinating.",
       "positionSkills": ".NET Framework, ASP.NET Web Api, C#, Azure SQL, Redis, Visual Paradigm, a bit of Objective-C and Java for mobile development, Jira",
       "positionTools": null,
@@ -53,7 +83,20 @@
       "positionDescription": null,
       "startDate": 2016,
       "endDate": null,
-      "positionResponsibilities": "•\tI created proposals, specifications, documentation, and training guides for our clients.\n•\tLeading a web development team that made geographical information applications.\n•\tI developed backends for our mobile applications.",
+      "positionResponsibilities": [
+        {
+          "text": "•\tI created proposals, specifications, documentation, and training guides for our clients.",
+          "type": "programming managerial"
+        },
+        {
+          "text": "•\tLeading a web development team that made geographical information applications.",
+          "type": "programming managerial"
+        },
+        {
+          "text": "•\tI developed backends for our mobile applications.",
+          "type": "programming"
+        }
+      ],
       "positionAchievements": null,
       "positionSkills": "ASP.NET Web Api, JavaScript, Angular.js, MongoDB, Node.js, Ionic, and a bit of Unity.",
       "positionTools": null,
@@ -68,7 +111,16 @@
       "positionDescription": null,
       "startDate": "Jun 2016",
       "endDate": "Jun 2018",
-      "positionResponsibilities": "•\tAs the lead developer, I have been responsible for architecting and implementing the web application and the additional services in a team of four people.  \n•\tI developed text mining engines that processed natural science publications.",
+      "positionResponsibilities": [
+        {
+          "text": "•\tAs the lead developer, I have been responsible for architecting and implementing the web application and the additional services in a team of four people.  ",
+          "type": "programming managerial"
+        },
+        {
+          "text": "•\tI developed text mining engines that processed natural science publications.",
+          "type": "programming"
+        }
+      ],
       "positionAchievements": "•\tI had to create a web application that proxied other websites while injecting custom code into them (the text processor and the document highlight and annotation engine) - this way, users didn't have to upload documents to our servers, only the text indices were stored (especially advantageous from a legal point of view).\n•\tI built different text mining engines based on Azure NLP and Stanford NLP Toolkit.",
       "positionSkills": "MS Azure, MongoDB, Express.js, Angular.js (<2), ES6, Redis, Stanford NLP Toolkit, Java",
       "positionTools": null,
@@ -83,7 +135,24 @@
       "positionDescription": null,
       "startDate": "Aug 2017",
       "endDate": "Dec 2020",
-      "positionResponsibilities": "•\tI managed a team of four engineers from multiple disciplines - mechanical, mechatronics, and electrical engineers - who designed and implemented working prototypes of the robot. Besides coordinating the goals and deliveries, I participated in high-level software architecture.\n•\tI authored product development roadmaps, financial plans, and presentations for potential investors and grants. This also included the understanding of medical technology-related regulatory processes. It was my duty to present the created materials as well.\n•\tI planned and organized public appearances at international exhibitions in Dubai and Toronto",
+      "positionResponsibilities": [
+        {
+          "text": "•\tI managed a team of four engineers from multiple disciplines - mechanical, mechatronics, and electrical engineers - who designed and implemented working prototypes of the robot.",
+          "type": "managerial "
+        },
+        {
+          "text": "Besides coordinating the goals and deliveries, I participated in high-level software architecture.",
+          "type": "programming"
+        },
+        {
+          "text": "•\tI authored product development roadmaps, financial plans, and presentations for potential investors and grants. This also included the understanding of medical technology-related regulatory processes. It was my duty to present the created materials as well.",
+          "type": "managerial"
+        },
+        {
+          "text": "•\tI planned and organized public appearances at international exhibitions in Dubai and Toronto",
+          "type": "managerial"
+        }
+      ],
       "positionAchievements": "•\tSince the working area was multidisciplinary, I had to equip myself with sufficient knowledge of these domains and the related technologies to understand and assist the work (including advanced mathematics, computer-controlled system theory, C, Matlab, SolidWorks, LabView) ",
       "positionSkills": "MS Project, C#, .NET Framework",
       "positionTools": null,
@@ -98,7 +167,32 @@
       "positionDescription": null,
       "startDate": "Jun 2017",
       "endDate": "May 2022",
-      "positionResponsibilities": "•\tAs a board member, I participated in the business development and decision-making processes, business planning, and investor relations. \n•\tMy duties involved forecasting sales and developing financial plans. Supervising their executions together with the external controlling department was necessary as well.\n•\tAs head of development, I designed the application architecture, the supporting automation services, the cloud operating environment, and the release processes using DevOps practices. The services operate at 99.99% availability (check at status.livlia.com).\n•\tI created BCP and BRP guidances, and technical documentation. I was also responsible for several regulatory-related tasks, including compliance with service-related local regulations of realtor services and GDPR compliance.\n•\tI had to select and integrate the software vendors of the application and the daily operation.\n•\tI was heavily involved in both frontend and backend-related programming tasks.",
+      "positionResponsibilities": [
+        {
+          "text": "•\tAs a board member, I participated in the business development and decision-making processes, business planning, and investor relations. ",
+          "type": "managerial"
+        },
+        {
+          "text": "•\tMy duties involved forecasting sales and developing financial plans. Supervising their executions together with the external controlling department was necessary as well.",
+          "type": "managerial"
+        },
+        {
+          "text": "•\tAs head of development, I designed the application architecture, the supporting automation services, the cloud operating environment, and the release processes using DevOps practices. The services operate at 99.99% availability (check at status.livlia.com).",
+          "type": "programming"
+        },
+        {
+          "text": "•\tI created BCP and BRP guidances, and technical documentation. I was also responsible for several regulatory-related tasks, including compliance with service-related local regulations of realtor services and GDPR compliance.",
+          "type": "programming managerial"
+        },
+        {
+          "text": "•\tI had to select and integrate the software vendors of the application and the daily operation.",
+          "type": "programming managerial"
+        },
+        {
+          "text": "•\tI was heavily involved in both frontend and backend-related programming tasks.",
+          "type": "programming"
+        }
+      ],
       "positionAchievements": null,
       "positionSkills": "Angular (latest), Nest.js, Node.js, TypeScript, MongoDB, MS Azure, Azure DevOps, DigitalOcean, MS 365, SharePoint, PowerQuery",
       "positionTools": "MetaBase, Raygun, Google Tag Manager, Google Optimize, Hotjar, ActiveCampaign, Mailgun…",
@@ -279,5 +373,11 @@
         }
       ]
     }
-  ]
+  ],
+  "contacts": {
+    "phone": "+36704337000",
+    "email": "zoltan.szilvai92@gmail.com",
+    "web": "https://szilvai.hu",
+    "github": "https://github.com/zszilvai"
+  }
 }

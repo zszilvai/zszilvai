@@ -22,10 +22,10 @@ pageWidth: 'restricted'
                       <h5 class="text-gray-900 text-xl font-medium mb-2">${item.title}</h5>
                       <p class="text-gray-700 text-base mb-4">
                         ${item.description
-              .replace(/<img[^>]*>/g,"")
-              .replace('h4', 'p')
-              .replace('h3', 'p')
-              .substr(0, 120) + '...'}
+                          .replace(/<img[^>]*>/g,"")
+                          .replace('h4', 'p')
+                          .replace('h3', 'p')
+                          .substr(0, 120) + '...'}
                       </p>
                       <a class="text-blue-500 hover:text-blue-700" href="${item.link}">Read more</a>
                       </p>

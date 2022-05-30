@@ -1,0 +1,10 @@
+<div class="skills">
+    <div class="flex flew-row flex-wrap">
+        <%
+        for(skill of (item.positionSkills+(item.positionTools ? ','+item.positionTools : '')).split(',')) { %>
+            <div class="px-1 py-1 m-1 rounded-full text-gray-500 bg-gray-200 flex align-center w-max cursor-pointer active:bg-gray-300 transition duration-300 ease">
+                <%= skill %>
+            </div>
+        <% } %>
+    </div>
+</div>

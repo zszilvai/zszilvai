@@ -204,3 +204,28 @@ h6 {
   height: calc(100vh - 72px);
   width: 100%
 }
+
+.programming {
+  display: block!important;
+}
+.managerial {
+  display: block!important;
+}
+.skills {
+  display: block!important;
+}
+.company {
+  display: block!important;
+}
+
+.active #open-arrow {
+  @apply hidden;
+}
+
+#close-arrow {
+  @apply hidden;
+}
+
+.active #close-arrow {
+  @apply inline;
+}
