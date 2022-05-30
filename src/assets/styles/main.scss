@@ -237,9 +237,6 @@ h6 {
 .skills {
   display: block!important;
 }
-.company {
-  display: block!important;
-}
 
 .active #open-arrow {
   @apply hidden;
@@ -253,3 +250,6 @@ h6 {
   @apply inline;
 }
 
+.company {
+  display: block!important;
+}

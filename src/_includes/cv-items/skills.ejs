@@ -70,7 +70,7 @@
                 <p class="font-bold">
                     <%=skill.name%>
                 </p>
-                <div class="flex flex-wrap justify-between print:hidden">
+                <div class="flex flex-wrap justify-around print:hidden">
                     <%for(item of skill.items){%>
                   <span class="rounded-full
                   <%=item.text || (item.color ? 'text-gray-100' : 'text-gray-600')%>
@@ -84,6 +84,7 @@
                   duration-300
                   ease
                   mt-2
+                  mx-2
                   w-max" style="background-color: <%=item.color%>; -webkit-print-color-adjust: economy">
                     <img class="rounded-full w-9 h-9 max-w-none print-preview-hide" alt="A"
                          src="<%=item.icon%>" />

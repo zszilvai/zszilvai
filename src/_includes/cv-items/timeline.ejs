@@ -163,11 +163,9 @@
                 </div>
                 <div class="ml-3">
                     <h3>
-                        <%= item.positionName %>
+                        <%= item.positionName %> - <%= item.companyName %>
                     </h3>
-                    <h4>
-                        <%= item.companyName %>
-                    </h4>
+
                     <div class="text-justify lg:hidden print-preview-visible">
                         <%- include('./company-info', {item: item}); %>
                     </div>
@@ -198,8 +196,8 @@
 
                     <% } %>
                     <%if (item.positionEducation) { %>
-                        <p class="font-extrabold italic my-3">Additional education</p>
-                        <p class="text-gray-500 mb-3 text-justify">
+                        <p class="font-extrabold italic mb-0.5">Additional education</p>
+                        <p class="text-gray-500 text-justify">
                             <%= item.positionEducation %>
                         </p>
                     <% } %>

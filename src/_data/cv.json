@@ -386,16 +386,18 @@
       "name": "Methodologies",
       "items": [
         {
-          "name": "BPMN",
+          "name": "Business Processes",
           "groupItems": [
             "Business Processes",
             "Business Process Management",
             "Business Process Automation"
-          ]
+          ],
+          "icon": "/assets/icons/icon-process-260.png"
         },
         {
           "name": "Agile Development",
-          "groupItems": ["Agile", "Scrum", "Kanban", "XP"]
+          "groupItems": ["Agile", "Scrum", "Kanban", "XP"],
+          "icon": "/assets/icons/icons8-agile-58.png"
         }
       ]
     },
