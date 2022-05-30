@@ -25,15 +25,15 @@
       "endDate": 2014,
       "positionResponsibilities": [
         {
-          "text": "•\tArchitecting our solutions, then implementing and operating the backend of the applications in the cloud.",
+          "text": "Architecting our solutions, then implementing and operating the backend of the applications in the cloud.",
           "type": "programming"
         },
         {
-          "text": "•\tAs a software engineer, I gained a comprehensive overview of different technologies and usages during the prototype development of ideas ranging from avalanche alarm systems to mobile applications for fast fashion stores. ",
+          "text": "As a software engineer, I gained a comprehensive overview of different technologies and usages during the prototype development of ideas ranging from avalanche alarm systems to mobile applications for fast fashion stores. ",
           "type": "programming"
         },
         {
-          "text": "•\tBootstrapping our ideas and trying to turn them into real businesses shaped the entrepreneur inside me.",
+          "text": "Bootstrapping our ideas and trying to turn them into real businesses shaped the entrepreneur inside me.",
           "type": "managerial"
         }
       ],
@@ -53,24 +53,24 @@
       "endDate": "Dec-15",
       "positionResponsibilities": [
         {
-          "text": "•\tCoordinating an Android, an iOS, and a web development team - 10 people - and designing the platform-independent, shared structure and logic of the applications. ",
+          "text": "Coordinating an Android, an iOS, and a web development team - 10 people - and designing the platform-independent, shared structure and logic of the applications. ",
           "type": "programming managerial"
         },
         {
-          "text": "•\tI architected and implemented the databases and the backend services as well. ",
+          "text": "I architected and implemented the databases and the backend services as well. ",
           "type": "programming"
         },
         {
-          "text": "•\tIt became my duty to introduce and manage agile practices in the development process.",
+          "text": "It became my duty to introduce and manage agile practices in the development process.",
           "type": "programming managerial"
         },
         {
-          "text": "•\tAs a shareholder, I was part of the decision-making processes and on-site negotiations with potential clients, suppliers, and potential partners for the overseas expansion.",
+          "text": "As a shareholder, I was part of the decision-making processes and on-site negotiations with potential clients, suppliers, and potential partners for the overseas expansion.",
           "type": "managerial"
         }
       ],
-      "positionAchievements": "•\tThe development process involved designing the architecture in Visual Paradigm, a software modeling tool - then we transpiled the UML diagrams to Objective-C, Java, and .NET code for easy implementation of shared logic.\n•\tExperimenting with indoor positioning and navigation using various network devices, from Bluetooth beacons to Cisco routers, was fascinating.",
-      "positionSkills": ".NET Framework, ASP.NET Web Api, C#, Azure SQL, Redis, Visual Paradigm, a bit of Objective-C and Java for mobile development, Jira",
+      "positionAchievements": "The development process involved designing the architecture in Visual Paradigm, a software modeling tool - then we transpiled the UML diagrams to Objective-C, Java, and .NET code for easy implementation of shared logic.\nExperimenting with indoor positioning and navigation using various network devices, from Bluetooth beacons to Cisco routers, was fascinating.",
+      "positionSkills": ".NET Framework, ASP.NET Web Api, C#, Azure SQL, Redis, Visual Paradigm, Objective-C and Java for mobile development, Jira",
       "positionTools": null,
       "positionEducation": null,
       "id": "kifly-connect-kft"
@@ -85,20 +85,20 @@
       "endDate": null,
       "positionResponsibilities": [
         {
-          "text": "•\tI created proposals, specifications, documentation, and training guides for our clients.",
+          "text": "I created proposals, specifications, documentation, and training guides for our clients.",
           "type": "programming managerial"
         },
         {
-          "text": "•\tLeading a web development team that made geographical information applications.",
+          "text": "Leading a web development team that made geographical information applications.",
           "type": "programming managerial"
         },
         {
-          "text": "•\tI developed backends for our mobile applications.",
+          "text": "I developed backends for our mobile applications.",
           "type": "programming"
         }
       ],
       "positionAchievements": null,
-      "positionSkills": "ASP.NET Web Api, JavaScript, Angular.js, MongoDB, Node.js, Ionic, and a bit of Unity.",
+      "positionSkills": "ASP.NET Web Api, JavaScript, Angular.js, MongoDB, Node.js, Ionic, Unity, Trello",
       "positionTools": null,
       "positionEducation": null,
       "id": "kifly-io-kft"
@@ -113,16 +113,16 @@
       "endDate": "Jun 2018",
       "positionResponsibilities": [
         {
-          "text": "•\tAs the lead developer, I have been responsible for architecting and implementing the web application and the additional services in a team of four people.  ",
+          "text": "As the lead developer, I have been responsible for architecting and implementing the web application and the additional services in a team of four people.  ",
           "type": "programming managerial"
         },
         {
-          "text": "•\tI developed text mining engines that processed natural science publications.",
+          "text": "I developed text mining engines that processed natural science publications.",
           "type": "programming"
         }
       ],
-      "positionAchievements": "•\tI had to create a web application that proxied other websites while injecting custom code into them (the text processor and the document highlight and annotation engine) - this way, users didn't have to upload documents to our servers, only the text indices were stored (especially advantageous from a legal point of view).\n•\tI built different text mining engines based on Azure NLP and Stanford NLP Toolkit.",
-      "positionSkills": "MS Azure, MongoDB, Express.js, Angular.js (<2), ES6, Redis, Stanford NLP Toolkit, Java",
+      "positionAchievements": "I had to create a web application that proxied other websites while injecting custom code into them (the text processor and the document highlight and annotation engine) - this way, users didn't have to upload documents to our servers, only the text indices were stored (especially advantageous from a legal point of view).\nI built different text mining engines based on Azure NLP and Stanford NLP Toolkit.",
+      "positionSkills": "MS Azure, MongoDB, Express.js, Angular.js (<2), ES6, Redis, Stanford NLP Toolkit, Java, Asana",
       "positionTools": null,
       "positionEducation": null,
       "id": "hubscience-kft"
@@ -137,7 +137,7 @@
       "endDate": "Dec 2020",
       "positionResponsibilities": [
         {
-          "text": "•\tI managed a team of four engineers from multiple disciplines - mechanical, mechatronics, and electrical engineers - who designed and implemented working prototypes of the robot.",
+          "text": "I managed a team of four engineers from multiple disciplines - mechanical, mechatronics, and electrical engineers - who designed and implemented working prototypes of the robot.",
           "type": "managerial "
         },
         {
@@ -145,19 +145,43 @@
           "type": "programming"
         },
         {
-          "text": "•\tI authored product development roadmaps, financial plans, and presentations for potential investors and grants. This also included the understanding of medical technology-related regulatory processes. It was my duty to present the created materials as well.",
+          "text": "I authored product development roadmaps, financial plans, and presentations for potential investors and grants. This also included the understanding of medical technology-related regulatory processes. It was my duty to present the created materials as well.",
           "type": "managerial"
         },
         {
-          "text": "•\tI planned and organized public appearances at international exhibitions in Dubai and Toronto",
+          "text": "I planned and organized public appearances at international exhibitions",
           "type": "managerial"
         }
       ],
-      "positionAchievements": "•\tSince the working area was multidisciplinary, I had to equip myself with sufficient knowledge of these domains and the related technologies to understand and assist the work (including advanced mathematics, computer-controlled system theory, C, Matlab, SolidWorks, LabView) ",
+      "positionAchievements": "Since the working area was multidisciplinary, I had to equip myself with sufficient knowledge of these domains and the related technologies to understand and assist the work (including advanced mathematics, computer-controlled system theory, C, Matlab, SolidWorks, LabView) ",
       "positionSkills": "MS Project, C#, .NET Framework",
       "positionTools": null,
       "positionEducation": "Health Care Technology Innovation - Lahav Executive Education, Tel Aviv University, 2019 (appreciations to the Ministry of Foreign Affairs and Trade)",
       "id": "dentistrobot-kft"
+    },
+    {
+      "companyName": "tanacsadas.online",
+      "companyLogo": null,
+      "companyDescription": "The company provides online services and marketing, primarily in the logistic industry.",
+      "positionName": "Senior tech consultant",
+      "positionDescription": null,
+      "startDate": "2019",
+      "endDate": " ",
+      "positionResponsibilities": [
+        {
+          "text": "I was responsible for the development of web applications and the backend services.",
+          "type": "programming"
+        },
+        {
+          "text": "I participated in creating web scrapers and other bots.",
+          "type": "programming"
+        }
+      ],
+      "positionAchievements": "We created a framework to use Azure SQL procedures as the backend for Angular applications. ",
+      "positionSkills": "Angular (latest), Nest.js, Node.js, TypeScript, MS Azure, Azure SQL",
+      "positionTools": null,
+      "positionEducation": null,
+      "id": "tanacsadas-online-kft"
     },
     {
       "companyName": "Livlia",
@@ -169,33 +193,33 @@
       "endDate": "May 2022",
       "positionResponsibilities": [
         {
-          "text": "•\tAs a board member, I participated in the business development and decision-making processes, business planning, and investor relations. ",
+          "text": "As a board member, I participated in the business development and decision-making processes, business planning, and investor relations. ",
           "type": "managerial"
         },
         {
-          "text": "•\tMy duties involved forecasting sales and developing financial plans. Supervising their executions together with the external controlling department was necessary as well.",
+          "text": "My duties involved forecasting sales and developing financial plans. Supervising their executions together with the external controlling department was necessary as well.",
           "type": "managerial"
         },
         {
-          "text": "•\tAs head of development, I designed the application architecture, the supporting automation services, the cloud operating environment, and the release processes using DevOps practices. The services operate at 99.99% availability (check at status.livlia.com).",
+          "text": "As head of development, I designed the application architecture, the supporting automation services, the cloud operating environment, and the release processes using DevOps practices. The services operate at 99.99% availability (check at status.livlia.com).",
           "type": "programming"
         },
         {
-          "text": "•\tI created BCP and BRP guidances, and technical documentation. I was also responsible for several regulatory-related tasks, including compliance with service-related local regulations of realtor services and GDPR compliance.",
+          "text": "I created BCP and BRP guidances, and technical documentation. I was also responsible for several regulatory-related tasks, including compliance with service-related local regulations of realtor services and GDPR compliance.",
           "type": "programming managerial"
         },
         {
-          "text": "•\tI had to select and integrate the software vendors of the application and the daily operation.",
+          "text": "I had to select and integrate the software vendors of the application and the daily operation.",
           "type": "programming managerial"
         },
         {
-          "text": "•\tI was heavily involved in both frontend and backend-related programming tasks.",
+          "text": "I was heavily involved in both frontend and backend-related programming tasks.",
           "type": "programming"
         }
       ],
       "positionAchievements": null,
       "positionSkills": "Angular (latest), Nest.js, Node.js, TypeScript, MongoDB, MS Azure, Azure DevOps, DigitalOcean, MS 365, SharePoint, PowerQuery",
-      "positionTools": "MetaBase, Raygun, Google Tag Manager, Google Optimize, Hotjar, ActiveCampaign, Mailgun…",
+      "positionTools": "MetaBase, Raygun, Google Tag Manager, Google Optimize, Hotjar, ActiveCampaign, Mailgun, ClickUp",
       "positionEducation": null,
       "id": "livlia-kft"
     }
@@ -218,8 +242,8 @@
     },
     {
       "name": "Russian",
-      "level": "In progress",
-      "percentage": "25"
+      "level": "Ongoing",
+      "percentage": "30"
     }
   ],
   "skills": [
@@ -355,6 +379,23 @@
         {
           "name": "PowerQuery",
           "icon": "/assets/icons/pq-icon-150x150.png"
+        }
+      ]
+    },
+    {
+      "name": "Methodologies",
+      "items": [
+        {
+          "name": "BPMN",
+          "groupItems": [
+            "Business Processes",
+            "Business Process Management",
+            "Business Process Automation"
+          ]
+        },
+        {
+          "name": "Agile Development",
+          "groupItems": ["Agile", "Scrum", "Kanban", "XP"]
         }
       ]
     },

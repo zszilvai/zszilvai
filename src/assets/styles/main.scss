@@ -133,39 +133,49 @@ h6 {
 //  background-attachment: fixed;
 //}
 
-.print-preview .print-preview-full {
-  @apply w-full;
-}
-.print-preview .print-preview-visible {
-  @apply block;
-}
-.print-preview .print-preview-chip {
-  @apply py-0;
-}
-.print-preview .print-preview-lanuage-bar {
-  @apply py-0;
-}
-
-.print-preview .print-preview-hide {
-  @apply hidden;
-}
-
-@media print {
+.print-preview {
   .print-preview-full {
     @apply w-full;
   }
-  .print-preview-hide {
-    @apply hidden;
-  }
+
   .print-preview-visible {
     @apply block;
   }
+
   .print-preview-chip {
     @apply py-0;
-    @apply text-gray-500
   }
+
   .print-preview-lanuage-bar {
     @apply py-0;
+  }
+
+  .print-preview-hide {
+    @apply hidden;
+  }
+
+  #CookiebotWidget {
+    @apply hidden;
+  }
+
+  h2 {
+    @apply text-2xl font-bold mb-0;
+  }
+
+ h3 {
+    @apply text-xl font-bold mb-0;
+  }
+
+  h4 {
+    @apply text-lg font-bold mb-0;
+  }
+}
+
+@media print {
+  .print-preview-chip {
+    @apply py-0;
+    @apply px-0;
+    @apply text-gray-500
   }
   body {
     -webkit-print-color-adjust: exact;
@@ -207,9 +217,19 @@ h6 {
 
 .programming {
   display: block!important;
+
+  &.list-item {
+    display: list-item!important;
+  }
+
 }
 .managerial {
   display: block!important;
+
+  &.list-item {
+    display: list-item!important;
+  }
+
 }
 .skills {
   display: block!important;
@@ -229,3 +249,4 @@ h6 {
 .active #close-arrow {
   @apply inline;
 }
+

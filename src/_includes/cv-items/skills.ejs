@@ -4,17 +4,73 @@
       skills.find(x=>x.items)
     }
 %>
-<div class="flex flex-row flex-wrap w-full justify-center">
-    <div class="w-full md:w-1/2 p-2 print-preview-full ">
-        <h3>Expertise</h3>
-        <small class="italic">
-            Although I work with a lot of different technologies, I never lose my lose focus a.
-        </small>
+<div class="flex flex-row flex-wrap-reverse w-full justify-around">
+    <div class="w-full md:w-1/3 md:p-2 print-preview-full">
+        <h3>Languages:</h3>
+        <ul class="text-gray-900 mt-8 print:mt-0">
+            <%for (language of cv.languages) {%>
+            <li>
+                <div class="flex flex-row flex-wrap items-center mt-2 mr-4 print:mt-0">
+                    <div class="w-full">
+                        <%=language.name%>
+                    </div>
+                    <div class="w-full">
+                        <div class="w-full bg-transparent">
+                            <div class="print-preview-lanuage-bar
+                                        bg-yellow-500
+                                        font-semibold
+                                        text-gray-700
+                                        flex
+                                        align-center
+                                        justify-center
+                                        text-center
+                                        p-0.5
+                                        leading-none
+                                        rounded-full" style="width: <%=language.percentage%>%">
+                                <%=language.level%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <%}%>
+        </ul>
+        <h3 class="pt-3">
+            Awards:
+        </h3>
+        <div class="flex flex-wrap items-end mr-4">
+        <span class="rounded-full
+            text-gray-500
+            bg-gray-200
+            font-semibold
+            border
+            border-solid
+            border-gray-300
+            flex
+            align-center
+            transition
+            duration-300
+            ease w-max align-middle">
+                <img class="rounded-full w-9 h-9 max-w-none print-preview-hide" alt="A"
+                     src="/assets/icons/oitm.png" />
+                <span class="flex items-center px-3 py-1 flex-wrap">
+                  V. Országos IT Megmérettetés - Angular I. place
+                </span>
+          </span>
+        </div>
+    </div>
+    <div class="w-full md:w-2/3 pr-4 pt-0 print-preview-full ">
+        <h2>Expertise</h2>
+        <p class="text-justify mt-8">
+            During my years in the software industry, I worked with numerous technologies. The below-listed ones are that I currently use  on a daily basis. I believe the most important is to choose the right technology and the right approach for every task, individually.
+        </p>
+        <ul class="mt-1">
         <%for(skill of cv.skills) {%>
-        <ul class="mt-5">
-            <li class="mb-5">
-                <%=skill.name%>
-                <div class="flex flex-wrap justify-around">
+            <li class="mb-1">
+                <p class="font-bold">
+                    <%=skill.name%>
+                </p>
+                <div class="flex flex-wrap justify-between print:hidden">
                     <%for(item of skill.items){%>
                   <span class="rounded-full
                   <%=item.text || (item.color ? 'text-gray-100' : 'text-gray-600')%>
@@ -46,62 +102,12 @@
                   </span>
                         <%}%>
                 </div>
-            </li>
-        </ul>
-        <%}%>
-    </div>
-    <div class="w-full md:w-1/2 p-2 print-preview-full">
-        <h3>Languages:</h3>
-        <ul class="text-gray-900">
-            <%for (language of cv.languages) {%>
-            <li>
-                <div class="flex flex-row flex-wrap items-center mt-2">
-                    <div class="w-1/5  print-preview-full">
-                        <%=language.name%>
-                    </div>
-                    <div class="w-4/5 print-preview-full">
-                        <div class="w-full bg-transparent">
-                            <div class="print-preview-lanuage-bar
-                                        bg-yellow-500
-                                        font-semibold
-                                        text-gray-700
-                                        flex
-                                        items-center
-                                        align-center
-                                        justify-center
-                                        p-0.5
-                                        leading-none
-                                        rounded-full" style="width: <%=language.percentage%>%">
-                                <%=language.level%>
-                            </div>
-                        </div>
-                    </div>
+                <div class="hidden print:block flex-wrap">
+                   <%=skill.items.map(x=>x.name).join(', ')%>
                 </div>
             </li>
-            <%}%>
+        <%}%>
         </ul>
-        <h3 class="pt-3">
-            Awards:
-        </h3>
-        <div class="flex flex-wrap items-end">
-        <span class="rounded-full
-            text-gray-500
-            bg-gray-200
-            font-semibold
-            border
-            border-solid
-            border-gray-300
-            flex
-            align-center
-            transition
-            duration-300
-            ease w-max align-middle">
-                <img class="rounded-full w-9 h-9 max-w-none print-preview-hide" alt="A"
-                     src="/assets/icons/oitm.png" />
-                <span class="flex items-center px-3 py-2 flex-wrap">
-                  V. Országos IT Megmérettetés - Angular I. place
-                </span>
-          </span>
-        </div>
     </div>
+
 </div>

@@ -41,6 +41,9 @@ module.exports = {
           900: '#1a202c',
         },
       },
+      screens: {
+        print: { raw: 'print' },
+      },
     },
   },
   variants: {

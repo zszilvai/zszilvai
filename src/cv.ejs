@@ -4,4 +4,11 @@ title: Resume
 pageWidth: 'restricted'
 ---
 
-<%-include('./_includes/cv-items/timeline');%>
+<div class="flex flex-wrap pb-10">
+    <div class="w-full border-b border-yellow-500">
+        <%-include('./_includes/cv-items/skills');%>
+    </div>
+    <div class="w-full">
+        <%-include('./_includes/cv-items/timeline')%>
+    </div>
+</div>

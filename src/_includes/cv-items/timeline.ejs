@@ -55,11 +55,13 @@
         // $('.' + skill).css({'display': 'block!important'});
         // document.styleSheets[0].addRule('.' + skill, 'display: block!important');
         adjustCSSRules('.' + skill, 'display: block !important');
+        adjustCSSRules('.' + skill+'.list-item', 'display: list-item !important');
         hiddenFeatures = hiddenFeatures.filter(x=>x!==skill);
       } else {
         $(this).removeClass('active');
         // $('.' + skill).css({'display': 'none'});
         adjustCSSRules('.' + skill, 'display: none');
+        adjustCSSRules('.' + skill+'.list-item', 'display: none');
         hiddenFeatures.push(skill);
       }
 
@@ -139,6 +141,13 @@
 <!--</div>-->
 
 <div class="flex flex-col">
+    <div class="flex flex-row">
+        <div class="hidden lg:block lg:w-1/3 print-preview-hide">
+        </div>
+        <div class="w-full lg:w-2/3 print-preview-full border-l border-yellow-500">
+            <h2 class="ml-3">Work experience</h2>
+        </div>
+    </div>
     <%for (item of cv.items.slice().reverse()) { %>
         <div class="flex flex-row">
             <div class="hidden lg:block lg:w-1/3 print-preview-hide">
@@ -153,33 +162,33 @@
                     <p class="text-yellow-500 font-bold"><%= item.startDate %><%if(item.endDate) { %> - <%= item.endDate %><% } %></p>
                 </div>
                 <div class="ml-3">
-                    <h3 class="mb-0.5">
+                    <h3>
                         <%= item.positionName %>
                     </h3>
-                    <h4 class="mb-1.5">
+                    <h4>
                         <%= item.companyName %>
                     </h4>
                     <div class="text-justify lg:hidden print-preview-visible">
                         <%- include('./company-info', {item: item}); %>
                     </div>
                     <%if (item.positionDescription) { %>
-                        <p class="text-gray-700 mb-3 text-justify">
+                        <p class="text-gray-700 mb-0.5 text-justify">
                             <%= item.positionDescription %>
                         </p>
                     <% } %>
                     <%if(item.positionResponsibilities) { %>
-                    <p class="font-extrabold italic mb-3 programming managerial">My responsibilities:</p>
-                    <ul>
+                    <p class="font-extrabold italic mb-0.5 programming managerial">My responsibilities:</p>
+                    <ul class="ml-5 list-disc">
                         <%for (skill of item.positionResponsibilities) { %>
-                        <li class="text-justify <%=skill.type%>">
+                        <li class="text-justify <%=skill.type%> list-item">
                             <%= skill.text %>
                         </li>
                         <% } %>
                     </ul>
                     <% } %>
                     <%if(item.positionAchievements) { %>
-                    <p class="font-extrabold italic my-3">Interesting tasks I faced:</p>
-                    <ul>
+                    <p class="font-extrabold italic mb-0.5">Interesting tasks I faced:</p>
+                    <ul class="ml-5 list-disc">
                         <%for (skill of item.positionAchievements.split('\n')) { %>
                             <li class="text-justify">
                                 <%= skill %>
@@ -201,8 +210,27 @@
             </div>
         </div>
     <%}%>
+    <div class="flex flex-row" id="education">
+        <div class="hidden lg:block lg:w-1/3 print-preview-hide">
+        </div>
+        <div class="w-full lg:w-2/3 print-preview-full border-l border-yellow-500">
+            <h2 class="ml-3">Education</h2>
+            <div class="flex flex-start items-center pt-3">
+                <div class="bg-yellow-500 w-5 h-5 rounded-full -ml-2.5 mr-3"> </div>
+                <p class="text-yellow-500 font-bold">2011-2016</p>
+            </div>
+            <div class="ml-3">
+                <h3>
+                    Pázmány Péter Catholic University
+                </h3>
+                <h4>
+                    Bachelor of Science in Computer Science Engineering
+                </h4>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="fixed bottom-0 w-fit lg:w-1/5 right-0 print-preview-hide bg-white border-2 border-yellow-500 rounded-xl">
+<div class="fixed bottom-0 w-fit lg:w-1/5 right-0 print-preview-hide bg-white border-2 border-yellow-500 rounded-xl print:hide">
     <h4 class="text-yellow-500 mb-2 bl-3 active pl-3" data-bs-toggle="collapse" data-bs-target="#features" aria-expanded="true" aria-controls="features" onclick="$(this).hasClass('active') ? $(this).removeClass('active') : $(this).addClass('active')">
         Choose features <span id="close-arrow">▼</span><span id="open-arrow">▲</span>
     </h4>
